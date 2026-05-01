@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Style Guide\n"
+"POT-Creation-Date: 2026-05-01T17:57:45Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/principles.md:1
+msgid "Guiding principles and rationale"
+msgstr ""
+
+#: src/principles.md:3
+msgid ""
+"When deciding on style guidelines, the style team follows these guiding "
+"principles (in rough priority order):"
+msgstr ""
+
+#: src/principles.md:6
+msgid "readability"
+msgstr ""
+
+#: src/principles.md:7
+msgid "scan-ability"
+msgstr ""
+
+#: src/principles.md:8
+msgid "avoiding misleading formatting"
+msgstr ""
+
+#: src/principles.md:9
+msgid ""
+"accessibility - readable and editable by users using the widest variety of "
+"hardware, including non-visual accessibility interfaces"
+msgstr ""
+
+#: src/principles.md:11
+msgid ""
+"readability of code in contexts without syntax highlighting or IDE "
+"assistance, such as rustc error messages, diffs, grep, and other plain-text "
+"contexts"
+msgstr ""
+
+#: src/principles.md:15
+msgid "aesthetics"
+msgstr ""
+
+#: src/principles.md:16
+msgid "sense of 'beauty'"
+msgstr ""
+
+#: src/principles.md:17
+msgid "consistent with other languages/tools"
+msgstr ""
+
+#: src/principles.md:19
+msgid "specifics"
+msgstr ""
+
+#: src/principles.md:20
+msgid ""
+"compatibility with version control practices - preserving diffs, merge-"
+"friendliness, etc."
+msgstr ""
+
+#: src/principles.md:22
+msgid "preventing rightward drift"
+msgstr ""
+
+#: src/principles.md:23
+msgid "minimising vertical space"
+msgstr ""
+
+#: src/principles.md:25
+msgid "application"
+msgstr ""
+
+#: src/principles.md:26
+msgid "ease of manual application"
+msgstr ""
+
+#: src/principles.md:27
+msgid ""
+"ease of implementation (in `rustfmt`, and in other tools/editors/code "
+"generators)"
+msgstr ""
+
+#: src/principles.md:28
+msgid "internal consistency"
+msgstr ""
+
+#: src/principles.md:29
+msgid "simplicity of formatting rules"
+msgstr ""
