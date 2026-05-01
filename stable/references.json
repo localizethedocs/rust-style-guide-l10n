@@ -13,22 +13,22 @@
     },
     "zh_CN" : 
     {
-      "branch" : "",
+      "branch" : "stable",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-04-14 19:55:32 +0000",
+        "hash" : "59807616e1fa2540724bfbac14d7976d7e4a3860",
+        "title" : "Auto merge of #155283 - jieyouxu:revert-gnullvm-link-shared-stable, r=Mark-Simulacrum"
       }
     },
     "zh_TW" : 
     {
-      "branch" : "",
+      "branch" : "stable",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-04-14 19:55:32 +0000",
+        "hash" : "59807616e1fa2540724bfbac14d7976d7e4a3860",
+        "title" : "Auto merge of #155283 - jieyouxu:revert-gnullvm-link-shared-stable, r=Mark-Simulacrum"
       }
     }
   },
