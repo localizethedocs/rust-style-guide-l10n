@@ -13,22 +13,22 @@
     },
     "zh_CN" : 
     {
-      "branch" : "",
+      "branch" : "main",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-05-01 13:57:47 +0000",
+        "hash" : "0164cc139285d5452053bcc5a83da046a501ed61",
+        "title" : "Auto merge of #156041 - JonathanBrouwer:rollup-yc0vOVk, r=JonathanBrouwer"
       }
     },
     "zh_TW" : 
     {
-      "branch" : "",
+      "branch" : "main",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-05-01 13:57:47 +0000",
+        "hash" : "0164cc139285d5452053bcc5a83da046a501ed61",
+        "title" : "Auto merge of #156041 - JonathanBrouwer:rollup-yc0vOVk, r=JonathanBrouwer"
       }
     }
   },

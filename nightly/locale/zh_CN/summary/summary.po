@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Style Guide\n"
+"POT-Creation-Date: 2026-05-01T17:58:05Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/SUMMARY.md:1
+msgid "Summary"
+msgstr ""
+
+#: src/SUMMARY.md:3
+msgid "Introduction"
+msgstr ""
+
+#: src/SUMMARY.md:5
+msgid "Items"
+msgstr ""
+
+#: src/SUMMARY.md:6
+msgid "Statements"
+msgstr ""
+
+#: src/SUMMARY.md:7
+msgid "Expressions"
+msgstr ""
+
+#: src/SUMMARY.md:8
+msgid "Types and Bounds"
+msgstr ""
+
+#: src/SUMMARY.md:9
+msgid "Other style advice"
+msgstr ""
+
+#: src/SUMMARY.md:10
+msgid "`Cargo.toml` conventions"
+msgstr ""
+
+#: src/SUMMARY.md:11
+msgid "Guiding principles and rationale"
+msgstr ""
+
+#: src/SUMMARY.md:12
+msgid "Rust style editions"
+msgstr ""
+
+#: src/SUMMARY.md:13
+msgid "Nightly-only syntax"
+msgstr ""
