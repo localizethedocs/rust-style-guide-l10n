@@ -1,0 +1,805 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Style Guide\n"
+"POT-Creation-Date: 2026-05-01T17:58:05Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/expressions.md:1
+msgid "Expressions"
+msgstr ""
+
+#: src/expressions.md:3
+msgid "Blocks"
+msgstr ""
+
+#: src/expressions.md:5
+msgid ""
+"A block expression must have a newline after the initial `{` and before the "
+"terminal `}`, unless it qualifies to be written as a single line based on "
+"another style rule."
+msgstr ""
+
+#: src/expressions.md:9
+msgid ""
+"A keyword before the block (such as `unsafe` or `async`) must be on the same "
+"line as the opening brace, with a single space between the keyword and the "
+"opening brace. Indent the contents of the block."
+msgstr ""
+
+#: src/expressions.md:20 src/expressions.md:29 src/expressions.md:40
+#: src/expressions.md:54
+msgid "// a comment in a block\n"
+msgstr ""
+
+#: src/expressions.md:46
+msgid "If a block has an attribute, put it on its own line before the block:"
+msgstr ""
+
+#: src/expressions.md:60
+msgid "Avoid writing comments on the same lines as either of the braces."
+msgstr ""
+
+#: src/expressions.md:62
+msgid "Write an empty block as `{}`."
+msgstr ""
+
+#: src/expressions.md:64
+msgid "Write a block on a single line if:"
+msgstr ""
+
+#: src/expressions.md:66
+msgid ""
+"it is either used in expression position (not statement position) or is an "
+"unsafe block in statement position,"
+msgstr ""
+
+#: src/expressions.md:68
+msgid "it contains a single-line expression and no statements, and"
+msgstr ""
+
+#: src/expressions.md:69
+msgid "it contains no comments"
+msgstr ""
+
+#: src/expressions.md:71
+msgid ""
+"For a single-line block, put spaces after the opening brace and before the "
+"closing brace."
+msgstr ""
+
+#: src/expressions.md:74 src/expressions.md:286 src/expressions.md:750
+msgid "Examples:"
+msgstr ""
+
+#: src/expressions.md:78
+msgid "// Single line\n"
+msgstr ""
+
+#: src/expressions.md:82
+msgid ""
+"// Not allowed on one line\n"
+"    // Statement position.\n"
+msgstr ""
+
+#: src/expressions.md:88
+msgid "// Contains a statement\n"
+msgstr ""
+
+#: src/expressions.md:96
+msgid "// Contains a comment\n"
+msgstr ""
+
+#: src/expressions.md:98 src/expressions.md:101
+msgid "// A comment\n"
+msgstr ""
+
+#: src/expressions.md:105
+msgid "// Multiple lines\n"
+msgstr ""
+
+#: src/expressions.md:119
+msgid "Closures"
+msgstr ""
+
+#: src/expressions.md:121
+msgid ""
+"Don't put any extra spaces before the first `|` (unless the closure is "
+"prefixed by a keyword such as `move`); put a space between the second `|` "
+"and the expression of the closure. Between the `|`s, use function definition "
+"syntax, but elide types where possible."
+msgstr ""
+
+#: src/expressions.md:126
+msgid ""
+"Use closures without the enclosing `{}`, if possible. Add the `{}` when you "
+"have a return type, when there are statements, when there are comments "
+"inside the closure, or when the body expression is a control-flow expression "
+"that spans multiple lines. If using braces, follow the rules above for "
+"blocks. Examples:"
+msgstr ""
+
+#: src/expressions.md:157
+msgid "Struct literals"
+msgstr ""
+
+#: src/expressions.md:159
+msgid ""
+"If a struct literal is _small_, format it on a single line, and do not use a "
+"trailing comma. If not, split it across multiple lines, with each field on "
+"its own block-indented line, and use a trailing comma."
+msgstr ""
+
+#: src/expressions.md:163
+msgid "For each `field: value` entry, put a space after the colon only."
+msgstr ""
+
+#: src/expressions.md:165
+msgid ""
+"Put a space before the opening brace. In the single-line form, put spaces "
+"after the opening brace and before the closing brace."
+msgstr ""
+
+#: src/expressions.md:176
+msgid ""
+"Functional record update syntax is treated like a field, but it must never "
+"have a trailing comma. Do not put a space after `..`."
+msgstr ""
+
+#: src/expressions.md:186
+msgid "Unit literals"
+msgstr ""
+
+#: src/expressions.md:188
+msgid ""
+"Never break between the opening and closing parentheses of the `()` unit "
+"literal."
+msgstr ""
+
+#: src/expressions.md:190
+msgid "Tuple literals"
+msgstr ""
+
+#: src/expressions.md:192
+msgid ""
+"Use a single-line form where possible. Do not put spaces between the opening "
+"parenthesis and the first element, or between the last element and the "
+"closing parenthesis. Separate elements with a comma followed by a space."
+msgstr ""
+
+#: src/expressions.md:196
+msgid ""
+"Where a single-line form is not possible, write the tuple across multiple "
+"lines, with each element of the tuple on its own block-indented line, and "
+"use a trailing comma."
+msgstr ""
+
+#: src/expressions.md:209
+msgid "Tuple struct literals"
+msgstr ""
+
+#: src/expressions.md:211
+msgid ""
+"Do not put space between the identifier and the opening parenthesis. "
+"Otherwise, follow the rules for tuple literals:"
+msgstr ""
+
+#: src/expressions.md:223
+msgid "Enum literals"
+msgstr ""
+
+#: src/expressions.md:225
+msgid ""
+"Follow the formatting rules for the various struct literals. Prefer using "
+"the name of the enum as a qualifying name, unless the enum is in the prelude:"
+msgstr ""
+
+#: src/expressions.md:237
+msgid "Array literals"
+msgstr ""
+
+#: src/expressions.md:239
+msgid ""
+"Write small array literals on a single line. Do not put spaces between the "
+"opening square bracket and the first element, or between the last element "
+"and the closing square bracket. Separate elements with a comma followed by a "
+"space."
+msgstr ""
+
+#: src/expressions.md:243
+msgid ""
+"If using the repeating initializer, put a space after the semicolon only."
+msgstr ""
+
+#: src/expressions.md:246
+msgid ""
+"Apply the same rules if using `vec!` or similar array-like macros; always "
+"use square brackets with such macros. Examples:"
+msgstr ""
+
+#: src/expressions.md:257
+msgid ""
+"For arrays that have to be broken across lines, if using the repeating "
+"initializer, break after the `;`, not before. Otherwise, follow the rules "
+"below for function calls. In any case, block-indent the contents of the "
+"initializer, and put line breaks after the opening square bracket and before "
+"the closing square bracket:"
+msgstr ""
+
+#: src/expressions.md:277
+msgid "Array accesses, indexing, and slicing"
+msgstr ""
+
+#: src/expressions.md:279
+msgid ""
+"Don't put spaces around the square brackets. Avoid breaking lines if "
+"possible. Never break a line between the target expression and the opening "
+"square bracket. If the indexing expression must be broken onto a subsequent "
+"line, or spans multiple lines itself, then block-indent the indexing "
+"expression, and put newlines after the opening square bracket and before the "
+"closing square bracket:"
+msgstr ""
+
+#: src/expressions.md:300
+msgid "Unary operations"
+msgstr ""
+
+#: src/expressions.md:302
+msgid ""
+"Do not include a space between a unary op and its operand (i.e., `!x`, not "
+"`! x`). However, there must be a space after `&mut`. Avoid line-breaking "
+"between a unary operator and its operand."
+msgstr ""
+
+#: src/expressions.md:306
+msgid "Binary operations"
+msgstr ""
+
+#: src/expressions.md:308
+msgid ""
+"Do include spaces around binary ops (i.e., `x + 1`, not `x+1`) (including "
+"`=` and other assignment operators such as `+=` or `*=`)."
+msgstr ""
+
+#: src/expressions.md:311
+msgid ""
+"For comparison operators, because for `T op U`, `&T op &U` is also "
+"implemented: if you have `t: &T`, and `u: U`, prefer `*t op u` to `t op &u`. "
+"In general, within expressions, prefer dereferencing to taking references, "
+"unless necessary (e.g. to avoid an unnecessarily expensive operation)."
+msgstr ""
+
+#: src/expressions.md:316
+msgid ""
+"Use parentheses liberally; do not necessarily elide them due to precedence. "
+"Tools should not automatically insert or remove parentheses. Do not use "
+"spaces to indicate precedence."
+msgstr ""
+
+#: src/expressions.md:320
+msgid ""
+"If line-breaking, block-indent each subsequent line. For assignment "
+"operators, break after the operator; for all other operators, put the "
+"operator on the subsequent line. Put each sub-expression on its own line:"
+msgstr ""
+
+#: src/expressions.md:332
+msgid ""
+"Prefer line-breaking at an assignment operator (either `=` or `+=`, etc.) "
+"rather than at other binary operators."
+msgstr ""
+
+#: src/expressions.md:335
+msgid "Casts (`as`)"
+msgstr ""
+
+#: src/expressions.md:337
+msgid ""
+"Format `as` casts like a binary operator. In particular, always include "
+"spaces around `as`, and if line-breaking, break before the `as` (never "
+"after) and block-indent the subsequent line. Format the type on the right-"
+"hand side using the rules for types."
+msgstr ""
+
+#: src/expressions.md:342
+msgid ""
+"However, unlike with other binary operators, if chaining a series of `as` "
+"casts that require line-breaking, and line-breaking before the first `as` "
+"suffices to make the remainder fit on the next line, don't break before any "
+"subsequent `as`; instead, leave the series of types all on the same line:"
+msgstr ""
+
+#: src/expressions.md:352
+msgid ""
+"If the subsequent line still requires line-breaking, break and block-indent "
+"before each `as` as with other binary operators."
+msgstr ""
+
+#: src/expressions.md:355
+msgid "Control flow"
+msgstr ""
+
+#: src/expressions.md:357
+msgid "Do not include extraneous parentheses for `if` and `while` expressions."
+msgstr ""
+
+#: src/expressions.md:364
+msgid "is better than"
+msgstr ""
+
+#: src/expressions.md:371
+msgid ""
+"Do include extraneous parentheses if it makes an arithmetic or logic "
+"expression easier to understand (`(x * 15) + (y * 20)` is fine)"
+msgstr ""
+
+#: src/expressions.md:374
+msgid "Function calls"
+msgstr ""
+
+#: src/expressions.md:376
+msgid ""
+"Do not put a space between the function name, and the opening parenthesis."
+msgstr ""
+
+#: src/expressions.md:378
+msgid "Do not put a space between an argument, and the comma which follows."
+msgstr ""
+
+#: src/expressions.md:380
+msgid "Do put a space between an argument, and the comma which precedes it."
+msgstr ""
+
+#: src/expressions.md:382
+msgid "Prefer not to break a line in the callee expression."
+msgstr ""
+
+#: src/expressions.md:384
+msgid ""
+"For a function call with no arguments (a nullary function call like "
+"`func()`), never break within the parentheses, and never put a space between "
+"the parentheses. Always write a nullary function call as a single-line call, "
+"never a multi-line call."
+msgstr ""
+
+#: src/expressions.md:389
+msgid "Single-line calls"
+msgstr ""
+
+#: src/expressions.md:391
+msgid ""
+"Do not put a space between the function name and open paren, between the "
+"open paren and the first argument, or between the last argument and the "
+"close paren."
+msgstr ""
+
+#: src/expressions.md:394
+msgid "Do not put a comma after the last argument."
+msgstr ""
+
+#: src/expressions.md:400
+msgid "Multi-line calls"
+msgstr ""
+
+#: src/expressions.md:402
+msgid ""
+"If the function call is not _small_, it would otherwise over-run the max "
+"width, or any argument or the callee is multi-line, then format the call "
+"across multiple lines. In this case, put each argument on its own block-"
+"indented line, break after the opening parenthesis and before the closing "
+"parenthesis, and use a trailing comma:"
+msgstr ""
+
+#: src/expressions.md:415
+msgid "Method calls"
+msgstr ""
+
+#: src/expressions.md:417
+msgid "Follow the function rules for calling."
+msgstr ""
+
+#: src/expressions.md:419
+msgid "Do not put any spaces around the `.`."
+msgstr ""
+
+#: src/expressions.md:425
+msgid "Macro uses"
+msgstr ""
+
+#: src/expressions.md:427
+msgid ""
+"If a macro can be parsed like other constructs, format it like those "
+"constructs. For example, a macro use `foo!(a, b, c)` can be parsed like a "
+"function call (ignoring the `!`), so format it using the rules for function "
+"calls."
+msgstr ""
+
+#: src/expressions.md:432
+msgid ""
+"The style guide defines specific formatting for particular macros in the "
+"language or standard library. The style guide does not define formatting for "
+"any third-party macros, even if similar to those in the language or standard "
+"library."
+msgstr ""
+
+#: src/expressions.md:437
+msgid "Format string macros"
+msgstr ""
+
+#: src/expressions.md:439
+msgid ""
+"For macros which take a format string, if all other arguments are _small_, "
+"format the arguments before the format string on a single line if they fit, "
+"and format the arguments after the format string on a single line if they "
+"fit, with the format string on its own line. If the arguments are not small "
+"or do not fit, put each on its own line as with a function. For example:"
+msgstr ""
+
+#: src/expressions.md:447
+msgid "\"Hello {} and {}\""
+msgstr ""
+
+#: src/expressions.md:453
+msgid "\"x and y were not equal, see {}\""
+msgstr ""
+
+#: src/expressions.md:458
+msgid "Chains of fields and method calls"
+msgstr ""
+
+#: src/expressions.md:460
+msgid ""
+"A chain is a sequence of field accesses, method calls, and/or uses of the "
+"try operator `?`. E.g., `a.b.c().d` or `foo?.bar().baz?`."
+msgstr ""
+
+#: src/expressions.md:463
+msgid ""
+"Format the chain on one line if it is \"small\" and otherwise possible to do "
+"so. If formatting on multiple lines, put each field access or method call in "
+"the chain on its own line, with the line-break before the `.` and after any "
+"`?`. Block-indent each subsequent line:"
+msgstr ""
+
+#: src/expressions.md:474
+msgid ""
+"If the length of the last line of the first element plus its indentation is "
+"less than or equal to the indentation of the second line, then combine the "
+"first and second lines if they fit. Apply this rule recursively."
+msgstr ""
+
+#: src/expressions.md:496
+msgid "Multi-line elements"
+msgstr ""
+
+#: src/expressions.md:498
+msgid ""
+"If any element in a chain is formatted across multiple lines, put that "
+"element and any later elements on their own lines."
+msgstr ""
+
+#: src/expressions.md:511
+msgid ""
+"Note there is block indent due to the chain and the function call in the "
+"above example."
+msgstr ""
+
+#: src/expressions.md:514
+msgid ""
+"Prefer formatting the whole chain in multi-line style and each element on "
+"one line, rather than putting some elements on multiple lines and some on a "
+"single line, e.g.,"
+msgstr ""
+
+#: src/expressions.md:519
+msgid "// Better\n"
+msgstr ""
+
+#: src/expressions.md:522 src/expressions.md:527
+msgid "\"//\""
+msgstr ""
+
+#: src/expressions.md:523
+msgid "// Worse\n"
+msgstr ""
+
+#: src/expressions.md:531
+msgid "Control flow expressions"
+msgstr ""
+
+#: src/expressions.md:533
+msgid ""
+"This section covers `for` and `loop` expressions, as well as `if` and "
+"`while` expressions with their sub-expression variants. This includes those "
+"with a single `let` sub-expression (i.e. `if let` and `while let`) as well "
+"as \"let-chains\": those with one or more `let` sub-expressions and one or "
+"more bool-type conditions (i.e.  `if a && let Some(b) = c`)."
+msgstr ""
+
+#: src/expressions.md:539
+msgid ""
+"Put the keyword, any initial clauses, and the opening brace of the block all "
+"on a single line, if they fit. Apply the usual rules for [block formatting]"
+"(#blocks) to the block."
+msgstr ""
+
+#: src/expressions.md:543
+msgid ""
+"If there is an `else` component, then put the closing brace, `else`, any "
+"following clause, and the opening brace all on the same line, with a single "
+"space before and after the `else` keyword:"
+msgstr ""
+
+#: src/expressions.md:563
+msgid ""
+"If the control line needs to be broken, then prefer breaking after the `=` "
+"for any `let` sub-expression in an `if` or `while` expression that does not "
+"fit, and before `in` in a `for` expression; the following line should be "
+"block indented. If the control line is broken for any reason, then the "
+"opening brace should be on its own line and not indented. Examples:"
+msgstr ""
+
+#: src/expressions.md:593 src/expressions.md:601 src/expressions.md:610
+#: src/expressions.md:622 src/expressions.md:626 src/expressions.md:630
+#: src/expressions.md:642
+msgid "// ...\n"
+msgstr ""
+
+#: src/expressions.md:614
+msgid ""
+"A let-chain control line is allowed to be formatted on a single line "
+"provided it only consists of two clauses, with the first, left-hand side "
+"operand being a literal or an `ident` (which can optionally be preceded by "
+"any number of unary prefix operators), and the second, right-hand side "
+"operand being a single-line `let` clause. Otherwise, the control line must "
+"be broken and formatted according to the above rules. For example:"
+msgstr ""
+
+#: src/expressions.md:636 src/expressions.md:648
+msgid "// ..\n"
+msgstr ""
+
+#: src/expressions.md:652
+msgid ""
+"Where the initial clause spans multiple lines and ends with one or more "
+"closing parentheses, square brackets, or braces, and there is nothing else "
+"on that line, and that line is not indented beyond the indent on the first "
+"line of the control flow expression, then put the opening brace of the block "
+"on the same line with a preceding space. For example:"
+msgstr ""
+
+#: src/expressions.md:663
+msgid "// Opening brace on same line as initial clause.\n"
+msgstr ""
+
+#: src/expressions.md:668
+msgid "Single line `if else`"
+msgstr ""
+
+#: src/expressions.md:670
+msgid ""
+"Put an `if else` or `if let else` on a single line if it occurs in "
+"expression context (i.e., is not a standalone statement), it contains a "
+"single `else` clause, and is _small_:"
+msgstr ""
+
+#: src/expressions.md:676
+msgid "// Examples that must be multi-line.\n"
+msgstr ""
+
+#: src/expressions.md:691
+msgid "Match"
+msgstr ""
+
+#: src/expressions.md:693
+msgid ""
+"Prefer not to line-break inside the discriminant expression. Always break "
+"after the opening brace and before the closing brace. Block-indent the match "
+"arms once:"
+msgstr ""
+
+#: src/expressions.md:699 src/expressions.md:703
+msgid "// arms\n"
+msgstr ""
+
+#: src/expressions.md:707
+msgid "Use a trailing comma for a match arm if and only if not using a block."
+msgstr ""
+
+#: src/expressions.md:709
+msgid "Never start a match arm pattern with `|`:"
+msgstr ""
+
+#: src/expressions.md:713
+msgid "// Don't do this.\n"
+msgstr ""
+
+#: src/expressions.md:715
+msgid "// Or this.\n"
+msgstr ""
+
+#: src/expressions.md:725
+msgid "Prefer:"
+msgstr ""
+
+#: src/expressions.md:739
+msgid ""
+"Avoid splitting the left-hand side (before the `=>`) of a match arm where "
+"possible. If the right-hand side of the match arm is kept on the same line, "
+"never use a block (unless the block is empty)."
+msgstr ""
+
+#: src/expressions.md:743
+msgid ""
+"If the right-hand side consists of multiple statements, or has line "
+"comments, or the start of the line does not fit on the same line as the left-"
+"hand side, use a block. Do not flatten a right-hand side block containing a "
+"single macro call because its expanded form could contain a trailing "
+"semicolon."
+msgstr ""
+
+#: src/expressions.md:748
+msgid "Block-indent the body of a block arm."
+msgstr ""
+
+#: src/expressions.md:759
+msgid "// A comment.\n"
+msgstr ""
+
+#: src/expressions.md:767
+msgid "// Trailing comma on last item.\n"
+msgstr ""
+
+#: src/expressions.md:776
+msgid ""
+"If the body is a single expression with no line comments and not a control "
+"flow expression, start it on the same line as the left-hand side. If not, "
+"then it must be in a block. Example:"
+msgstr ""
+
+#: src/expressions.md:782
+msgid "// A combinable expression.\n"
+msgstr ""
+
+#: src/expressions.md:787
+msgid "// A non-combinable expression\n"
+msgstr ""
+
+#: src/expressions.md:800
+msgid "Line-breaking"
+msgstr ""
+
+#: src/expressions.md:802
+msgid ""
+"If using a block form on the right-hand side of a match arm makes it "
+"possible to avoid breaking on the left-hand side, do that:"
+msgstr ""
+
+#: src/expressions.md:806
+msgid "// Assuming the following line does not fit in the max width\n"
+msgstr ""
+
+#: src/expressions.md:810
+msgid "// Prefer this\n"
+msgstr ""
+
+#: src/expressions.md:816
+msgid "// To splitting the pattern.\n"
+msgstr ""
+
+#: src/expressions.md:819
+msgid "Never break after `=>` without using the block form of the body."
+msgstr ""
+
+#: src/expressions.md:821
+msgid ""
+"If the left-hand side must be split and there is an `if` clause, break "
+"before the `if` and block indent. In this case, always use a block body and "
+"start the body on a new line:"
+msgstr ""
+
+#: src/expressions.md:833
+msgid ""
+"If required to break the pattern, put each clause of the pattern on its own "
+"line with no additional indent, breaking before the `|`. If there is an `if` "
+"clause, use the above form:"
+msgstr ""
+
+#: src/expressions.md:854
+msgid ""
+"If the pattern is multi-line, and the last line is less wide than the "
+"indent, do not put the `if` clause on a new line. E.g.,"
+msgstr ""
+
+#: src/expressions.md:867
+msgid ""
+"If every clause in a pattern is _small_, but the whole pattern does not fit "
+"on one line, then format the pattern across multiple lines with as many "
+"clauses per line as possible. Again, break before a `|`:"
+msgstr ""
+
+#: src/expressions.md:878
+msgid ""
+"We define a pattern clause to be _small_ if it fits on a single line and "
+"matches \"small\" in the following grammar:"
+msgstr ""
+
+#: src/expressions.md:892
+msgid "E.g., `&&Some(foo)` matches, `Foo(4, Bar)` does not."
+msgstr ""
+
+#: src/expressions.md:894
+msgid "Combinable expressions"
+msgstr ""
+
+#: src/expressions.md:896
+msgid ""
+"Where a function call has a single argument, and that argument is formatted "
+"across multiple-lines, format the outer call as if it were a single-line "
+"call, if the result fits. Apply the same combining behaviour to any similar "
+"expressions which have multi-line, block-indented lists of sub-expressions "
+"delimited by parentheses (e.g., macros or tuple struct literals). E.g.,"
+msgstr ""
+
+#: src/expressions.md:928
+msgid "Apply this behavior recursively."
+msgstr ""
+
+#: src/expressions.md:930
+msgid ""
+"For a function with multiple arguments, if the last argument is a multi-line "
+"closure with an explicit block, there are no other closure arguments, and "
+"all the arguments and the first line of the closure fit on the first line, "
+"use the same combining behavior:"
+msgstr ""
+
+#: src/expressions.md:942
+msgid "Ranges"
+msgstr ""
+
+#: src/expressions.md:944
+msgid ""
+"Do not put spaces in ranges, e.g., `0..10`, `x..=y`, `..x.len()`, `foo..`."
+msgstr ""
+
+#: src/expressions.md:946
+msgid ""
+"When writing a range with both upper and lower bounds, if the line must be "
+"broken within the range, break before the range operator and block indent "
+"the second line:"
+msgstr ""
+
+#: src/expressions.md:955
+msgid ""
+"For the sake of indicating precedence, if either bound is a compound "
+"expression, use parentheses around it, e.g., `..(x + 1)`, `(x.f)..(x.f."
+"len())`, or `0..(x - 10)`."
+msgstr ""
+
+#: src/expressions.md:959
+msgid "Hexadecimal literals"
+msgstr ""
+
+#: src/expressions.md:961
+msgid ""
+"Hexadecimal literals may use upper- or lower-case letters, but they must not "
+"be mixed within the same literal. Projects should use the same case for all "
+"literals, but we do not make a recommendation for either lower- or upper-"
+"case."
+msgstr ""
+
+#: src/expressions.md:965
+msgid "Patterns"
+msgstr ""
+
+#: src/expressions.md:967
+msgid ""
+"Format patterns like their corresponding expressions. See the section on "
+"`match` for additional formatting for patterns in match arms."
+msgstr ""
