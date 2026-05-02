@@ -5,19 +5,19 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/cargo.md:1
 msgid "`Cargo.toml` conventions"
-msgstr ""
+msgstr "`Cargo.toml` 慣例"
 
 #: src/cargo.md:3
 msgid "Formatting conventions"
-msgstr ""
+msgstr "格式化慣例"
 
 #: src/cargo.md:5
 msgid "Use the same line width and indentation as Rust code."
@@ -71,11 +71,11 @@ msgstr ""
 
 #: src/cargo.md:36
 msgid "\"another_feature\""
-msgstr ""
+msgstr "\"another_feature\""
 
 #: src/cargo.md:37
 msgid "\"yet_another_feature\""
-msgstr ""
+msgstr "\"yet_another_feature\""
 
 #: src/cargo.md:38
 msgid "\"some_dependency?/some_feature\""
