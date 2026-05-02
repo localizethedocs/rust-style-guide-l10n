@@ -5,43 +5,43 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/SUMMARY.md:1
 msgid "Summary"
-msgstr ""
+msgstr "摘要"
 
 #: src/SUMMARY.md:3
 msgid "Introduction"
-msgstr ""
+msgstr "介紹"
 
 #: src/SUMMARY.md:5
 msgid "Items"
-msgstr ""
+msgstr "項目"
 
 #: src/SUMMARY.md:6
 msgid "Statements"
-msgstr ""
+msgstr "陳述句"
 
 #: src/SUMMARY.md:7
 msgid "Expressions"
-msgstr ""
+msgstr "表達式"
 
 #: src/SUMMARY.md:8
 msgid "Types and Bounds"
-msgstr ""
+msgstr "型別與邊界"
 
 #: src/SUMMARY.md:9
 msgid "Other style advice"
-msgstr ""
+msgstr "其他風格建議"
 
 #: src/SUMMARY.md:10
 msgid "`Cargo.toml` conventions"
-msgstr ""
+msgstr "`Cargo.toml` 慣例"
 
 #: src/SUMMARY.md:11
 msgid "Guiding principles and rationale"
@@ -49,7 +49,7 @@ msgstr ""
 
 #: src/SUMMARY.md:12
 msgid "Rust style editions"
-msgstr ""
+msgstr "Rust 風格版次"
 
 #: src/SUMMARY.md:13
 msgid "Nightly-only syntax"
