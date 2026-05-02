@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/expressions.md:1
@@ -76,7 +76,7 @@ msgstr ""
 
 #: src/expressions.md:74 src/expressions.md:286 src/expressions.md:750
 msgid "Examples:"
-msgstr ""
+msgstr "範例："
 
 #: src/expressions.md:78
 msgid "// Single line\n"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: src/expressions.md:157
 msgid "Struct literals"
-msgstr ""
+msgstr "結構體定數"
 
 #: src/expressions.md:159
 msgid ""
@@ -192,7 +192,7 @@ msgstr ""
 
 #: src/expressions.md:223
 msgid "Enum literals"
-msgstr ""
+msgstr "列舉定數"
 
 #: src/expressions.md:225
 msgid ""
@@ -202,7 +202,7 @@ msgstr ""
 
 #: src/expressions.md:237
 msgid "Array literals"
-msgstr ""
+msgstr "陣列定數"
 
 #: src/expressions.md:239
 msgid ""
@@ -248,7 +248,7 @@ msgstr ""
 
 #: src/expressions.md:300
 msgid "Unary operations"
-msgstr ""
+msgstr "一元運算"
 
 #: src/expressions.md:302
 msgid ""
@@ -259,7 +259,7 @@ msgstr ""
 
 #: src/expressions.md:306
 msgid "Binary operations"
-msgstr ""
+msgstr "二元運算"
 
 #: src/expressions.md:308
 msgid ""
@@ -323,7 +323,7 @@ msgstr ""
 
 #: src/expressions.md:355
 msgid "Control flow"
-msgstr ""
+msgstr "控制流程"
 
 #: src/expressions.md:357
 msgid "Do not include extraneous parentheses for `if` and `while` expressions."
@@ -341,7 +341,7 @@ msgstr ""
 
 #: src/expressions.md:374
 msgid "Function calls"
-msgstr ""
+msgstr "函式呼叫"
 
 #: src/expressions.md:376
 msgid ""
@@ -398,7 +398,7 @@ msgstr ""
 
 #: src/expressions.md:415
 msgid "Method calls"
-msgstr ""
+msgstr "方法呼叫"
 
 #: src/expressions.md:417
 msgid "Follow the function rules for calling."
@@ -430,7 +430,7 @@ msgstr ""
 
 #: src/expressions.md:437
 msgid "Format string macros"
-msgstr ""
+msgstr "格式化字串巨集"
 
 #: src/expressions.md:439
 msgid ""
@@ -511,7 +511,7 @@ msgstr ""
 
 #: src/expressions.md:531
 msgid "Control flow expressions"
-msgstr ""
+msgstr "控制流程表達式"
 
 #: src/expressions.md:533
 msgid ""
@@ -784,7 +784,7 @@ msgstr ""
 
 #: src/expressions.md:959
 msgid "Hexadecimal literals"
-msgstr ""
+msgstr "十六進位定數"
 
 #: src/expressions.md:961
 msgid ""

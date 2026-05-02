@@ -5,19 +5,19 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/statements.md:1
 msgid "Statements"
-msgstr ""
+msgstr "陳述句"
 
 #: src/statements.md:3
 msgid "Let statements"
-msgstr ""
+msgstr "let 陳述句"
 
 #: src/statements.md:5
 msgid ""
@@ -63,7 +63,7 @@ msgstr ""
 
 #: src/statements.md:60
 msgid "Examples:"
-msgstr ""
+msgstr "範例："
 
 #: src/statements.md:103
 msgid "else blocks (let-else statements)"
@@ -158,27 +158,27 @@ msgstr ""
 
 #: src/statements.md:166 src/statements.md:185
 msgid "For example:"
-msgstr ""
+msgstr "例如："
 
 #: src/statements.md:170 src/statements.md:191
 msgid "\"abc\""
-msgstr ""
+msgstr "\"abc\""
 
 #: src/statements.md:172
 msgid "\"def\""
-msgstr ""
+msgstr "\"def\""
 
 #: src/statements.md:173 src/statements.md:194
 msgid "\"123456\""
-msgstr ""
+msgstr "\"123456\""
 
 #: src/statements.md:174
 msgid "\"string\""
-msgstr ""
+msgstr "\"string\""
 
 #: src/statements.md:175
 msgid "\"cheese\""
-msgstr ""
+msgstr "\"cheese\""
 
 #: src/statements.md:181
 msgid ""
@@ -193,7 +193,7 @@ msgstr ""
 
 #: src/statements.md:198
 msgid "\"fffffffffffffffff\""
-msgstr ""
+msgstr "\"fffffffffffffffff\""
 
 #: src/statements.md:233
 msgid "Macros in statement position"
