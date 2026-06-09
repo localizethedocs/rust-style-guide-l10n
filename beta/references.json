@@ -37,9 +37,9 @@
     "branch" : "beta",
     "commit" : 
     {
-      "date" : "2026-05-01 10:40:11 +0000",
-      "hash" : "a5a9a5438ba8f6b83523031de99b15c12b44cea4",
-      "title" : "Auto merge of #156011 - cuviper:beta-next, r=cuviper"
+      "date" : "2026-06-07 13:17:56 +0000",
+      "hash" : "a57ed7fabb7b6d1c83d781a1340d67975427ed79",
+      "title" : "Auto merge of #157548 - ehuss:beta-1.97-update-cargo, r=ehuss"
     }
   },
   "type" : "branch",
