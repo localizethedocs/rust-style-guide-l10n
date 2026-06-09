@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-<h1 id="localization-of-the-rust-style-guide">Localization of The Rust Style Guide</h1>
+<h1 id="localization-of-the-rust-style-guide">Rust 風格指南的在地化</h1>
 </div>
 
 <details><summary><strong>切換語言</strong></summary>
