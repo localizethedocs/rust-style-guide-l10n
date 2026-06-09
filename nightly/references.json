@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-05-01 13:57:47 +0000",
-      "hash" : "0164cc139285d5452053bcc5a83da046a501ed61",
-      "title" : "Auto merge of #156041 - JonathanBrouwer:rollup-yc0vOVk, r=JonathanBrouwer"
+      "date" : "2026-06-09 08:24:56 +0000",
+      "hash" : "057ed8ba87418a77d5758f2d5e13f84b89b197e9",
+      "title" : "Auto merge of #157557 - sgasho:link_llvm_dynamically_on_x86_mac, r=ZuseZ4"
     }
   },
   "type" : "branch",
