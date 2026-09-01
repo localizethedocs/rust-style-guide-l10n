@@ -1,0 +1,2753 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Style Guide\n"
+"POT-Creation-Date: 2026-05-01T17:57:45Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/cargo.md:1
+msgid "`Cargo.toml` conventions"
+msgstr ""
+
+#: src/cargo.md:3
+msgid "Formatting conventions"
+msgstr ""
+
+#: src/cargo.md:5
+msgid "Use the same line width and indentation as Rust code."
+msgstr ""
+
+#: src/cargo.md:7
+msgid ""
+"Put a blank line between the last key-value pair in a section and the header "
+"of the next section. Do not place a blank line between section headers and "
+"the key-value pairs in that section, or between key-value pairs in a section."
+msgstr ""
+
+#: src/cargo.md:11
+msgid ""
+"Version-sort key names within each section, with the exception of the "
+"`[package]` section. Put the `[package]` section at the top of the file; put "
+"the `name` and `version` keys in that order at the top of that section, "
+"followed by the remaining keys other than `description` in order, followed "
+"by the `description` at the end of that section."
+msgstr ""
+
+#: src/cargo.md:17
+msgid ""
+"Don't use quotes around any standard key names; use bare keys. Only use "
+"quoted keys for non-standard keys whose names require them, and avoid "
+"introducing such key names when possible.  See the [TOML specification]"
+"(https://toml.io/en/v1.0.0#keys) for details."
+msgstr ""
+
+#: src/cargo.md:22
+msgid ""
+"Put a single space both before and after the `=` between a key and value. Do "
+"not indent any key names; start all key names at the start of a line."
+msgstr ""
+
+#: src/cargo.md:25
+msgid ""
+"Use multi-line strings (rather than newline escape sequences) for any string "
+"values that include multiple lines, such as the crate description."
+msgstr ""
+
+#: src/cargo.md:28
+msgid ""
+"For array values, such as a list of features, put the entire list on the "
+"same line as the key, if it fits. Otherwise, use block indentation: put a "
+"newline after the opening square bracket, indent each item by one "
+"indentation level, put a comma after each item (including the last), and put "
+"the closing square bracket at the start of a line by itself after the last "
+"item."
+msgstr ""
+
+#: src/cargo.md:36
+msgid "\"another_feature\""
+msgstr ""
+
+#: src/cargo.md:37
+msgid "\"yet_another_feature\""
+msgstr ""
+
+#: src/cargo.md:38
+msgid "\"some_dependency?/some_feature\""
+msgstr ""
+
+#: src/cargo.md:42
+msgid ""
+"For table values, such as a crate dependency with a path, write the entire "
+"table using curly braces and commas on the same line as the key if it fits. "
+"If the entire table does not fit on the same line as the key, separate it "
+"out into a separate section with key-value pairs:"
+msgstr ""
+
+#: src/cargo.md:47
+msgid ""
+"```toml\n"
+"[dependencies]\n"
+"crate1 = { path = \"crate1\", version = \"1.2.3\" }\n"
+"\n"
+"[dependencies.extremely_long_crate_name_goes_here]\n"
+"path = \"extremely_long_path_name_goes_right_here\"\n"
+"version = \"4.5.6\"\n"
+"```"
+msgstr ""
+
+#: src/cargo.md:56
+msgid "Metadata conventions"
+msgstr ""
+
+#: src/cargo.md:58
+msgid ""
+"The authors list, if present, should consist of strings that each contain an "
+"author name followed by an email address in angle brackets: `Full Name "
+"<email@address>`. It should not contain bare email addresses, or names "
+"without email addresses. (The authors list may also include a mailing list "
+"address without an associated name.)"
+msgstr ""
+
+#: src/cargo.md:64
+msgid ""
+"The license field must contain a valid [SPDX expression](https://spdx.org/"
+"spdx-specification-21-web-version#h.jxpfx0ykyb60), using valid [SPDX license "
+"names](https://spdx.org/licenses/). (As an exception, by widespread "
+"convention, the license field may use `/` in place of `OR`; for example, "
+"`MIT/Apache-2.0`.)"
+msgstr ""
+
+#: src/cargo.md:70
+msgid ""
+"The homepage field, if present, must consist of a single URL, including the "
+"scheme (e.g. `https://example.org/`, not just `example.org`.)"
+msgstr ""
+
+#: src/cargo.md:73
+msgid ""
+"Within the description field, wrap text at 80 columns. Don't start the "
+"description field with the name of the crate (e.g. \"cratename is a ...\"); "
+"just describe the crate itself. If providing a multi-sentence description, "
+"the first sentence should go on a line by itself and summarize the crate, "
+"like the subject of an email or commit message; subsequent sentences can "
+"then describe the crate in more detail."
+msgstr ""
+
+#: src/expressions.md:1
+msgid "Expressions"
+msgstr ""
+
+#: src/expressions.md:3
+msgid "Blocks"
+msgstr ""
+
+#: src/expressions.md:5
+msgid ""
+"A block expression must have a newline after the initial `{` and before the "
+"terminal `}`, unless it qualifies to be written as a single line based on "
+"another style rule."
+msgstr ""
+
+#: src/expressions.md:9
+msgid ""
+"A keyword before the block (such as `unsafe` or `async`) must be on the same "
+"line as the opening brace, with a single space between the keyword and the "
+"opening brace. Indent the contents of the block."
+msgstr ""
+
+#: src/expressions.md:20 src/expressions.md:29 src/expressions.md:40
+#: src/expressions.md:54
+msgid "// a comment in a block\n"
+msgstr ""
+
+#: src/expressions.md:46
+msgid "If a block has an attribute, put it on its own line before the block:"
+msgstr ""
+
+#: src/expressions.md:60
+msgid "Avoid writing comments on the same lines as either of the braces."
+msgstr ""
+
+#: src/expressions.md:62
+msgid "Write an empty block as `{}`."
+msgstr ""
+
+#: src/expressions.md:64
+msgid "Write a block on a single line if:"
+msgstr ""
+
+#: src/expressions.md:66
+msgid ""
+"it is either used in expression position (not statement position) or is an "
+"unsafe block in statement position,"
+msgstr ""
+
+#: src/expressions.md:68
+msgid "it contains a single-line expression and no statements, and"
+msgstr ""
+
+#: src/expressions.md:69
+msgid "it contains no comments"
+msgstr ""
+
+#: src/expressions.md:71
+msgid ""
+"For a single-line block, put spaces after the opening brace and before the "
+"closing brace."
+msgstr ""
+
+#: src/expressions.md:74 src/expressions.md:286 src/expressions.md:750
+msgid "Examples:"
+msgstr ""
+
+#: src/expressions.md:78
+msgid "// Single line\n"
+msgstr ""
+
+#: src/expressions.md:82
+msgid ""
+"// Not allowed on one line\n"
+"    // Statement position.\n"
+msgstr ""
+
+#: src/expressions.md:88
+msgid "// Contains a statement\n"
+msgstr ""
+
+#: src/expressions.md:96
+msgid "// Contains a comment\n"
+msgstr ""
+
+#: src/expressions.md:98 src/expressions.md:101
+msgid "// A comment\n"
+msgstr ""
+
+#: src/expressions.md:105
+msgid "// Multiple lines\n"
+msgstr ""
+
+#: src/expressions.md:119
+msgid "Closures"
+msgstr ""
+
+#: src/expressions.md:121
+msgid ""
+"Don't put any extra spaces before the first `|` (unless the closure is "
+"prefixed by a keyword such as `move`); put a space between the second `|` "
+"and the expression of the closure. Between the `|`s, use function definition "
+"syntax, but elide types where possible."
+msgstr ""
+
+#: src/expressions.md:126
+msgid ""
+"Use closures without the enclosing `{}`, if possible. Add the `{}` when you "
+"have a return type, when there are statements, when there are comments "
+"inside the closure, or when the body expression is a control-flow expression "
+"that spans multiple lines. If using braces, follow the rules above for "
+"blocks. Examples:"
+msgstr ""
+
+#: src/expressions.md:157
+msgid "Struct literals"
+msgstr ""
+
+#: src/expressions.md:159
+msgid ""
+"If a struct literal is _small_, format it on a single line, and do not use a "
+"trailing comma. If not, split it across multiple lines, with each field on "
+"its own block-indented line, and use a trailing comma."
+msgstr ""
+
+#: src/expressions.md:163
+msgid "For each `field: value` entry, put a space after the colon only."
+msgstr ""
+
+#: src/expressions.md:165
+msgid ""
+"Put a space before the opening brace. In the single-line form, put spaces "
+"after the opening brace and before the closing brace."
+msgstr ""
+
+#: src/expressions.md:176
+msgid ""
+"Functional record update syntax is treated like a field, but it must never "
+"have a trailing comma. Do not put a space after `..`."
+msgstr ""
+
+#: src/expressions.md:186
+msgid "Unit literals"
+msgstr ""
+
+#: src/expressions.md:188
+msgid ""
+"Never break between the opening and closing parentheses of the `()` unit "
+"literal."
+msgstr ""
+
+#: src/expressions.md:190
+msgid "Tuple literals"
+msgstr ""
+
+#: src/expressions.md:192
+msgid ""
+"Use a single-line form where possible. Do not put spaces between the opening "
+"parenthesis and the first element, or between the last element and the "
+"closing parenthesis. Separate elements with a comma followed by a space."
+msgstr ""
+
+#: src/expressions.md:196
+msgid ""
+"Where a single-line form is not possible, write the tuple across multiple "
+"lines, with each element of the tuple on its own block-indented line, and "
+"use a trailing comma."
+msgstr ""
+
+#: src/expressions.md:209
+msgid "Tuple struct literals"
+msgstr ""
+
+#: src/expressions.md:211
+msgid ""
+"Do not put space between the identifier and the opening parenthesis. "
+"Otherwise, follow the rules for tuple literals:"
+msgstr ""
+
+#: src/expressions.md:223
+msgid "Enum literals"
+msgstr ""
+
+#: src/expressions.md:225
+msgid ""
+"Follow the formatting rules for the various struct literals. Prefer using "
+"the name of the enum as a qualifying name, unless the enum is in the prelude:"
+msgstr ""
+
+#: src/expressions.md:237
+msgid "Array literals"
+msgstr ""
+
+#: src/expressions.md:239
+msgid ""
+"Write small array literals on a single line. Do not put spaces between the "
+"opening square bracket and the first element, or between the last element "
+"and the closing square bracket. Separate elements with a comma followed by a "
+"space."
+msgstr ""
+
+#: src/expressions.md:243
+msgid ""
+"If using the repeating initializer, put a space after the semicolon only."
+msgstr ""
+
+#: src/expressions.md:246
+msgid ""
+"Apply the same rules if using `vec!` or similar array-like macros; always "
+"use square brackets with such macros. Examples:"
+msgstr ""
+
+#: src/expressions.md:257
+msgid ""
+"For arrays that have to be broken across lines, if using the repeating "
+"initializer, break after the `;`, not before. Otherwise, follow the rules "
+"below for function calls. In any case, block-indent the contents of the "
+"initializer, and put line breaks after the opening square bracket and before "
+"the closing square bracket:"
+msgstr ""
+
+#: src/expressions.md:277
+msgid "Array accesses, indexing, and slicing"
+msgstr ""
+
+#: src/expressions.md:279
+msgid ""
+"Don't put spaces around the square brackets. Avoid breaking lines if "
+"possible. Never break a line between the target expression and the opening "
+"square bracket. If the indexing expression must be broken onto a subsequent "
+"line, or spans multiple lines itself, then block-indent the indexing "
+"expression, and put newlines after the opening square bracket and before the "
+"closing square bracket:"
+msgstr ""
+
+#: src/expressions.md:300
+msgid "Unary operations"
+msgstr ""
+
+#: src/expressions.md:302
+msgid ""
+"Do not include a space between a unary op and its operand (i.e., `!x`, not "
+"`! x`). However, there must be a space after `&mut`. Avoid line-breaking "
+"between a unary operator and its operand."
+msgstr ""
+
+#: src/expressions.md:306
+msgid "Binary operations"
+msgstr ""
+
+#: src/expressions.md:308
+msgid ""
+"Do include spaces around binary ops (i.e., `x + 1`, not `x+1`) (including "
+"`=` and other assignment operators such as `+=` or `*=`)."
+msgstr ""
+
+#: src/expressions.md:311
+msgid ""
+"For comparison operators, because for `T op U`, `&T op &U` is also "
+"implemented: if you have `t: &T`, and `u: U`, prefer `*t op u` to `t op &u`. "
+"In general, within expressions, prefer dereferencing to taking references, "
+"unless necessary (e.g. to avoid an unnecessarily expensive operation)."
+msgstr ""
+
+#: src/expressions.md:316
+msgid ""
+"Use parentheses liberally; do not necessarily elide them due to precedence. "
+"Tools should not automatically insert or remove parentheses. Do not use "
+"spaces to indicate precedence."
+msgstr ""
+
+#: src/expressions.md:320
+msgid ""
+"If line-breaking, block-indent each subsequent line. For assignment "
+"operators, break after the operator; for all other operators, put the "
+"operator on the subsequent line. Put each sub-expression on its own line:"
+msgstr ""
+
+#: src/expressions.md:332
+msgid ""
+"Prefer line-breaking at an assignment operator (either `=` or `+=`, etc.) "
+"rather than at other binary operators."
+msgstr ""
+
+#: src/expressions.md:335
+msgid "Casts (`as`)"
+msgstr ""
+
+#: src/expressions.md:337
+msgid ""
+"Format `as` casts like a binary operator. In particular, always include "
+"spaces around `as`, and if line-breaking, break before the `as` (never "
+"after) and block-indent the subsequent line. Format the type on the right-"
+"hand side using the rules for types."
+msgstr ""
+
+#: src/expressions.md:342
+msgid ""
+"However, unlike with other binary operators, if chaining a series of `as` "
+"casts that require line-breaking, and line-breaking before the first `as` "
+"suffices to make the remainder fit on the next line, don't break before any "
+"subsequent `as`; instead, leave the series of types all on the same line:"
+msgstr ""
+
+#: src/expressions.md:352
+msgid ""
+"If the subsequent line still requires line-breaking, break and block-indent "
+"before each `as` as with other binary operators."
+msgstr ""
+
+#: src/expressions.md:355
+msgid "Control flow"
+msgstr ""
+
+#: src/expressions.md:357
+msgid "Do not include extraneous parentheses for `if` and `while` expressions."
+msgstr ""
+
+#: src/expressions.md:364
+msgid "is better than"
+msgstr ""
+
+#: src/expressions.md:371
+msgid ""
+"Do include extraneous parentheses if it makes an arithmetic or logic "
+"expression easier to understand (`(x * 15) + (y * 20)` is fine)"
+msgstr ""
+
+#: src/expressions.md:374
+msgid "Function calls"
+msgstr ""
+
+#: src/expressions.md:376
+msgid ""
+"Do not put a space between the function name, and the opening parenthesis."
+msgstr ""
+
+#: src/expressions.md:378
+msgid "Do not put a space between an argument, and the comma which follows."
+msgstr ""
+
+#: src/expressions.md:380
+msgid "Do put a space between an argument, and the comma which precedes it."
+msgstr ""
+
+#: src/expressions.md:382
+msgid "Prefer not to break a line in the callee expression."
+msgstr ""
+
+#: src/expressions.md:384
+msgid ""
+"For a function call with no arguments (a nullary function call like "
+"`func()`), never break within the parentheses, and never put a space between "
+"the parentheses. Always write a nullary function call as a single-line call, "
+"never a multi-line call."
+msgstr ""
+
+#: src/expressions.md:389
+msgid "Single-line calls"
+msgstr ""
+
+#: src/expressions.md:391
+msgid ""
+"Do not put a space between the function name and open paren, between the "
+"open paren and the first argument, or between the last argument and the "
+"close paren."
+msgstr ""
+
+#: src/expressions.md:394
+msgid "Do not put a comma after the last argument."
+msgstr ""
+
+#: src/expressions.md:400
+msgid "Multi-line calls"
+msgstr ""
+
+#: src/expressions.md:402
+msgid ""
+"If the function call is not _small_, it would otherwise over-run the max "
+"width, or any argument or the callee is multi-line, then format the call "
+"across multiple lines. In this case, put each argument on its own block-"
+"indented line, break after the opening parenthesis and before the closing "
+"parenthesis, and use a trailing comma:"
+msgstr ""
+
+#: src/expressions.md:415
+msgid "Method calls"
+msgstr ""
+
+#: src/expressions.md:417
+msgid "Follow the function rules for calling."
+msgstr ""
+
+#: src/expressions.md:419
+msgid "Do not put any spaces around the `.`."
+msgstr ""
+
+#: src/expressions.md:425
+msgid "Macro uses"
+msgstr ""
+
+#: src/expressions.md:427
+msgid ""
+"If a macro can be parsed like other constructs, format it like those "
+"constructs. For example, a macro use `foo!(a, b, c)` can be parsed like a "
+"function call (ignoring the `!`), so format it using the rules for function "
+"calls."
+msgstr ""
+
+#: src/expressions.md:432
+msgid ""
+"The style guide defines specific formatting for particular macros in the "
+"language or standard library. The style guide does not define formatting for "
+"any third-party macros, even if similar to those in the language or standard "
+"library."
+msgstr ""
+
+#: src/expressions.md:437
+msgid "Format string macros"
+msgstr ""
+
+#: src/expressions.md:439
+msgid ""
+"For macros which take a format string, if all other arguments are _small_, "
+"format the arguments before the format string on a single line if they fit, "
+"and format the arguments after the format string on a single line if they "
+"fit, with the format string on its own line. If the arguments are not small "
+"or do not fit, put each on its own line as with a function. For example:"
+msgstr ""
+
+#: src/expressions.md:447
+msgid "\"Hello {} and {}\""
+msgstr ""
+
+#: src/expressions.md:453
+msgid "\"x and y were not equal, see {}\""
+msgstr ""
+
+#: src/expressions.md:458
+msgid "Chains of fields and method calls"
+msgstr ""
+
+#: src/expressions.md:460
+msgid ""
+"A chain is a sequence of field accesses, method calls, and/or uses of the "
+"try operator `?`. E.g., `a.b.c().d` or `foo?.bar().baz?`."
+msgstr ""
+
+#: src/expressions.md:463
+msgid ""
+"Format the chain on one line if it is \"small\" and otherwise possible to do "
+"so. If formatting on multiple lines, put each field access or method call in "
+"the chain on its own line, with the line-break before the `.` and after any "
+"`?`. Block-indent each subsequent line:"
+msgstr ""
+
+#: src/expressions.md:474
+msgid ""
+"If the length of the last line of the first element plus its indentation is "
+"less than or equal to the indentation of the second line, then combine the "
+"first and second lines if they fit. Apply this rule recursively."
+msgstr ""
+
+#: src/expressions.md:496
+msgid "Multi-line elements"
+msgstr ""
+
+#: src/expressions.md:498
+msgid ""
+"If any element in a chain is formatted across multiple lines, put that "
+"element and any later elements on their own lines."
+msgstr ""
+
+#: src/expressions.md:511
+msgid ""
+"Note there is block indent due to the chain and the function call in the "
+"above example."
+msgstr ""
+
+#: src/expressions.md:514
+msgid ""
+"Prefer formatting the whole chain in multi-line style and each element on "
+"one line, rather than putting some elements on multiple lines and some on a "
+"single line, e.g.,"
+msgstr ""
+
+#: src/expressions.md:519
+msgid "// Better\n"
+msgstr ""
+
+#: src/expressions.md:522 src/expressions.md:527
+msgid "\"//\""
+msgstr ""
+
+#: src/expressions.md:523
+msgid "// Worse\n"
+msgstr ""
+
+#: src/expressions.md:531
+msgid "Control flow expressions"
+msgstr ""
+
+#: src/expressions.md:533
+msgid ""
+"This section covers `for` and `loop` expressions, as well as `if` and "
+"`while` expressions with their sub-expression variants. This includes those "
+"with a single `let` sub-expression (i.e. `if let` and `while let`) as well "
+"as \"let-chains\": those with one or more `let` sub-expressions and one or "
+"more bool-type conditions (i.e.  `if a && let Some(b) = c`)."
+msgstr ""
+
+#: src/expressions.md:539
+msgid ""
+"Put the keyword, any initial clauses, and the opening brace of the block all "
+"on a single line, if they fit. Apply the usual rules for [block formatting]"
+"(#blocks) to the block."
+msgstr ""
+
+#: src/expressions.md:543
+msgid ""
+"If there is an `else` component, then put the closing brace, `else`, any "
+"following clause, and the opening brace all on the same line, with a single "
+"space before and after the `else` keyword:"
+msgstr ""
+
+#: src/expressions.md:563
+msgid ""
+"If the control line needs to be broken, then prefer breaking after the `=` "
+"for any `let` sub-expression in an `if` or `while` expression that does not "
+"fit, and before `in` in a `for` expression; the following line should be "
+"block indented. If the control line is broken for any reason, then the "
+"opening brace should be on its own line and not indented. Examples:"
+msgstr ""
+
+#: src/expressions.md:593 src/expressions.md:601 src/expressions.md:610
+#: src/expressions.md:622 src/expressions.md:626 src/expressions.md:630
+#: src/expressions.md:642
+msgid "// ...\n"
+msgstr ""
+
+#: src/expressions.md:614
+msgid ""
+"A let-chain control line is allowed to be formatted on a single line "
+"provided it only consists of two clauses, with the first, left-hand side "
+"operand being a literal or an `ident` (which can optionally be preceded by "
+"any number of unary prefix operators), and the second, right-hand side "
+"operand being a single-line `let` clause. Otherwise, the control line must "
+"be broken and formatted according to the above rules. For example:"
+msgstr ""
+
+#: src/expressions.md:636 src/expressions.md:648
+msgid "// ..\n"
+msgstr ""
+
+#: src/expressions.md:652
+msgid ""
+"Where the initial clause spans multiple lines and ends with one or more "
+"closing parentheses, square brackets, or braces, and there is nothing else "
+"on that line, and that line is not indented beyond the indent on the first "
+"line of the control flow expression, then put the opening brace of the block "
+"on the same line with a preceding space. For example:"
+msgstr ""
+
+#: src/expressions.md:663
+msgid "// Opening brace on same line as initial clause.\n"
+msgstr ""
+
+#: src/expressions.md:668
+msgid "Single line `if else`"
+msgstr ""
+
+#: src/expressions.md:670
+msgid ""
+"Put an `if else` or `if let else` on a single line if it occurs in "
+"expression context (i.e., is not a standalone statement), it contains a "
+"single `else` clause, and is _small_:"
+msgstr ""
+
+#: src/expressions.md:676
+msgid "// Examples that must be multi-line.\n"
+msgstr ""
+
+#: src/expressions.md:691
+msgid "Match"
+msgstr ""
+
+#: src/expressions.md:693
+msgid ""
+"Prefer not to line-break inside the discriminant expression. Always break "
+"after the opening brace and before the closing brace. Block-indent the match "
+"arms once:"
+msgstr ""
+
+#: src/expressions.md:699 src/expressions.md:703
+msgid "// arms\n"
+msgstr ""
+
+#: src/expressions.md:707
+msgid "Use a trailing comma for a match arm if and only if not using a block."
+msgstr ""
+
+#: src/expressions.md:709
+msgid "Never start a match arm pattern with `|`:"
+msgstr ""
+
+#: src/expressions.md:713
+msgid "// Don't do this.\n"
+msgstr ""
+
+#: src/expressions.md:715
+msgid "// Or this.\n"
+msgstr ""
+
+#: src/expressions.md:725
+msgid "Prefer:"
+msgstr ""
+
+#: src/expressions.md:739
+msgid ""
+"Avoid splitting the left-hand side (before the `=>`) of a match arm where "
+"possible. If the right-hand side of the match arm is kept on the same line, "
+"never use a block (unless the block is empty)."
+msgstr ""
+
+#: src/expressions.md:743
+msgid ""
+"If the right-hand side consists of multiple statements, or has line "
+"comments, or the start of the line does not fit on the same line as the left-"
+"hand side, use a block. Do not flatten a right-hand side block containing a "
+"single macro call because its expanded form could contain a trailing "
+"semicolon."
+msgstr ""
+
+#: src/expressions.md:748
+msgid "Block-indent the body of a block arm."
+msgstr ""
+
+#: src/expressions.md:759
+msgid "// A comment.\n"
+msgstr ""
+
+#: src/expressions.md:767
+msgid "// Trailing comma on last item.\n"
+msgstr ""
+
+#: src/expressions.md:776
+msgid ""
+"If the body is a single expression with no line comments and not a control "
+"flow expression, start it on the same line as the left-hand side. If not, "
+"then it must be in a block. Example:"
+msgstr ""
+
+#: src/expressions.md:782
+msgid "// A combinable expression.\n"
+msgstr ""
+
+#: src/expressions.md:787
+msgid "// A non-combinable expression\n"
+msgstr ""
+
+#: src/expressions.md:800
+msgid "Line-breaking"
+msgstr ""
+
+#: src/expressions.md:802
+msgid ""
+"If using a block form on the right-hand side of a match arm makes it "
+"possible to avoid breaking on the left-hand side, do that:"
+msgstr ""
+
+#: src/expressions.md:806
+msgid "// Assuming the following line does not fit in the max width\n"
+msgstr ""
+
+#: src/expressions.md:810
+msgid "// Prefer this\n"
+msgstr ""
+
+#: src/expressions.md:816
+msgid "// To splitting the pattern.\n"
+msgstr ""
+
+#: src/expressions.md:819
+msgid "Never break after `=>` without using the block form of the body."
+msgstr ""
+
+#: src/expressions.md:821
+msgid ""
+"If the left-hand side must be split and there is an `if` clause, break "
+"before the `if` and block indent. In this case, always use a block body and "
+"start the body on a new line:"
+msgstr ""
+
+#: src/expressions.md:833
+msgid ""
+"If required to break the pattern, put each clause of the pattern on its own "
+"line with no additional indent, breaking before the `|`. If there is an `if` "
+"clause, use the above form:"
+msgstr ""
+
+#: src/expressions.md:854
+msgid ""
+"If the pattern is multi-line, and the last line is less wide than the "
+"indent, do not put the `if` clause on a new line. E.g.,"
+msgstr ""
+
+#: src/expressions.md:867
+msgid ""
+"If every clause in a pattern is _small_, but the whole pattern does not fit "
+"on one line, then format the pattern across multiple lines with as many "
+"clauses per line as possible. Again, break before a `|`:"
+msgstr ""
+
+#: src/expressions.md:878
+msgid ""
+"We define a pattern clause to be _small_ if it fits on a single line and "
+"matches \"small\" in the following grammar:"
+msgstr ""
+
+#: src/expressions.md:892
+msgid "E.g., `&&Some(foo)` matches, `Foo(4, Bar)` does not."
+msgstr ""
+
+#: src/expressions.md:894
+msgid "Combinable expressions"
+msgstr ""
+
+#: src/expressions.md:896
+msgid ""
+"Where a function call has a single argument, and that argument is formatted "
+"across multiple-lines, format the outer call as if it were a single-line "
+"call, if the result fits. Apply the same combining behaviour to any similar "
+"expressions which have multi-line, block-indented lists of sub-expressions "
+"delimited by parentheses (e.g., macros or tuple struct literals). E.g.,"
+msgstr ""
+
+#: src/expressions.md:928
+msgid "Apply this behavior recursively."
+msgstr ""
+
+#: src/expressions.md:930
+msgid ""
+"For a function with multiple arguments, if the last argument is a multi-line "
+"closure with an explicit block, there are no other closure arguments, and "
+"all the arguments and the first line of the closure fit on the first line, "
+"use the same combining behavior:"
+msgstr ""
+
+#: src/expressions.md:942
+msgid "Ranges"
+msgstr ""
+
+#: src/expressions.md:944
+msgid ""
+"Do not put spaces in ranges, e.g., `0..10`, `x..=y`, `..x.len()`, `foo..`."
+msgstr ""
+
+#: src/expressions.md:946
+msgid ""
+"When writing a range with both upper and lower bounds, if the line must be "
+"broken within the range, break before the range operator and block indent "
+"the second line:"
+msgstr ""
+
+#: src/expressions.md:955
+msgid ""
+"For the sake of indicating precedence, if either bound is a compound "
+"expression, use parentheses around it, e.g., `..(x + 1)`, `(x.f)..(x.f."
+"len())`, or `0..(x - 10)`."
+msgstr ""
+
+#: src/expressions.md:959
+msgid "Hexadecimal literals"
+msgstr ""
+
+#: src/expressions.md:961
+msgid ""
+"Hexadecimal literals may use upper- or lower-case letters, but they must not "
+"be mixed within the same literal. Projects should use the same case for all "
+"literals, but we do not make a recommendation for either lower- or upper-"
+"case."
+msgstr ""
+
+#: src/expressions.md:965
+msgid "Patterns"
+msgstr ""
+
+#: src/expressions.md:967
+msgid ""
+"Format patterns like their corresponding expressions. See the section on "
+"`match` for additional formatting for patterns in match arms."
+msgstr ""
+
+#: src/principles.md:1
+msgid "Guiding principles and rationale"
+msgstr ""
+
+#: src/principles.md:3
+msgid ""
+"When deciding on style guidelines, the style team follows these guiding "
+"principles (in rough priority order):"
+msgstr ""
+
+#: src/principles.md:6
+msgid "readability"
+msgstr ""
+
+#: src/principles.md:7
+msgid "scan-ability"
+msgstr ""
+
+#: src/principles.md:8
+msgid "avoiding misleading formatting"
+msgstr ""
+
+#: src/principles.md:9
+msgid ""
+"accessibility - readable and editable by users using the widest variety of "
+"hardware, including non-visual accessibility interfaces"
+msgstr ""
+
+#: src/principles.md:11
+msgid ""
+"readability of code in contexts without syntax highlighting or IDE "
+"assistance, such as rustc error messages, diffs, grep, and other plain-text "
+"contexts"
+msgstr ""
+
+#: src/principles.md:15
+msgid "aesthetics"
+msgstr ""
+
+#: src/principles.md:16
+msgid "sense of 'beauty'"
+msgstr ""
+
+#: src/principles.md:17
+msgid "consistent with other languages/tools"
+msgstr ""
+
+#: src/principles.md:19
+msgid "specifics"
+msgstr ""
+
+#: src/principles.md:20
+msgid ""
+"compatibility with version control practices - preserving diffs, merge-"
+"friendliness, etc."
+msgstr ""
+
+#: src/principles.md:22
+msgid "preventing rightward drift"
+msgstr ""
+
+#: src/principles.md:23
+msgid "minimising vertical space"
+msgstr ""
+
+#: src/principles.md:25
+msgid "application"
+msgstr ""
+
+#: src/principles.md:26
+msgid "ease of manual application"
+msgstr ""
+
+#: src/principles.md:27
+msgid ""
+"ease of implementation (in `rustfmt`, and in other tools/editors/code "
+"generators)"
+msgstr ""
+
+#: src/principles.md:28
+msgid "internal consistency"
+msgstr ""
+
+#: src/principles.md:29
+msgid "simplicity of formatting rules"
+msgstr ""
+
+#: src/index.md:1
+msgid "Rust Style Guide"
+msgstr ""
+
+#: src/index.md:3
+msgid "Motivation - why use a formatting tool?"
+msgstr ""
+
+#: src/index.md:5
+msgid ""
+"Formatting code is a mostly mechanical task which takes both time and mental "
+"effort. By using an automatic formatting tool, a programmer is relieved of "
+"this task and can concentrate on more important things."
+msgstr ""
+
+#: src/index.md:9
+msgid ""
+"Furthermore, by sticking to an established style guide (such as this one), "
+"programmers don't need to formulate ad hoc style rules, nor do they need to "
+"debate with other programmers what style rules should be used, saving time, "
+"communication overhead, and mental energy."
+msgstr ""
+
+#: src/index.md:14
+msgid ""
+"Humans comprehend information through pattern matching. By ensuring that all "
+"Rust code has similar formatting, less mental effort is required to "
+"comprehend a new project, lowering the barrier to entry for new developers."
+msgstr ""
+
+#: src/index.md:18
+msgid ""
+"Thus, there are productivity benefits to using a formatting tool (such as "
+"`rustfmt`), and even larger benefits by using a community-consistent "
+"formatting, typically by using a formatting tool's default settings."
+msgstr ""
+
+#: src/index.md:22
+msgid "The default Rust style"
+msgstr ""
+
+#: src/index.md:24
+msgid ""
+"The Rust Style Guide defines the default Rust style, and _recommends_ that "
+"developers and tools follow the default Rust style. Tools such as `rustfmt` "
+"use the style guide as a reference for the default style. Everything in this "
+"style guide, whether or not it uses language such as \"must\" or the "
+"imperative mood such as \"insert a space ...\" or \"break the line after ..."
+"\", refers to the default style."
+msgstr ""
+
+#: src/index.md:31
+msgid ""
+"This should not be interpreted as forbidding developers from following a non-"
+"default style, or forbidding tools from adding any particular configuration "
+"options."
+msgstr ""
+
+#: src/index.md:35
+msgid "Bugs"
+msgstr ""
+
+#: src/index.md:37
+msgid ""
+"If the style guide differs from rustfmt, that may represent a bug in "
+"rustfmt, or a bug in the style guide; either way, please report it to the "
+"style team or the rustfmt team or both, for investigation and fix."
+msgstr ""
+
+#: src/index.md:41
+msgid ""
+"If implementing a new formatting tool based on the style guide and default "
+"Rust style, please test it on the corpus of existing Rust code, and avoid "
+"causing widespread breakage. The implementation and testing of such a tool "
+"may surface bugs in either the style guide or rustfmt, as well as bugs in "
+"the tool itself."
+msgstr ""
+
+#: src/index.md:46
+msgid "We typically resolve bugs in a fashion that avoids widespread breakage."
+msgstr ""
+
+#: src/index.md:50
+msgid "Indentation and line width"
+msgstr ""
+
+#: src/index.md:52
+msgid "Use spaces, not tabs."
+msgstr ""
+
+#: src/index.md:53
+msgid ""
+"Each level of indentation must be 4 spaces (that is, all indentation outside "
+"of string literals and comments must be a multiple of 4)."
+msgstr ""
+
+#: src/index.md:55
+msgid "The maximum width for a line is 100 characters."
+msgstr ""
+
+#: src/index.md:57
+msgid "Block indent"
+msgstr ""
+
+#: src/index.md:59
+msgid "Prefer block indent over visual indent:"
+msgstr ""
+
+#: src/index.md:62
+msgid "// Block indent\n"
+msgstr ""
+
+#: src/index.md:67
+msgid "// Visual indent\n"
+msgstr ""
+
+#: src/index.md:73
+msgid ""
+"This makes for smaller diffs (e.g., if `a_function_call` is renamed in the "
+"above example) and less rightward drift."
+msgstr ""
+
+#: src/index.md:76
+msgid "Trailing commas"
+msgstr ""
+
+#: src/index.md:78
+msgid ""
+"In comma-separated lists of any kind, use a trailing comma when followed by "
+"a newline:"
+msgstr ""
+
+#: src/index.md:94
+msgid ""
+"This makes moving code (e.g., by copy and paste) easier, and makes diffs "
+"smaller, as appending or removing items does not require modifying another "
+"line to add or remove a comma."
+msgstr ""
+
+#: src/index.md:98
+msgid "Blank lines"
+msgstr ""
+
+#: src/index.md:100
+msgid ""
+"Separate items and statements by either zero or one blank lines (i.e., one "
+"or two newlines). E.g,"
+msgstr ""
+
+#: src/index.md:115
+msgid "Trailing whitespace"
+msgstr ""
+
+#: src/index.md:117
+msgid ""
+"Do not include trailing whitespace on the end of any line. This includes "
+"blank lines, comment lines, code lines, and string literals."
+msgstr ""
+
+#: src/index.md:120
+msgid ""
+"Note that avoiding trailing whitespace in string literals requires care to "
+"preserve the value of the literal."
+msgstr ""
+
+#: src/index.md:123
+msgid "Sorting"
+msgstr ""
+
+#: src/index.md:125
+msgid ""
+"In various cases, the default Rust style specifies to sort things. If not "
+"otherwise specified, such sorting should be \"version sorting\", which "
+"ensures that (for instance) `x8` comes before `x16` even though the "
+"character `1` comes before the character `8`."
+msgstr ""
+
+#: src/index.md:130
+msgid ""
+"For the purposes of the Rust style, to compare two strings for version-"
+"sorting:"
+msgstr ""
+
+#: src/index.md:132
+msgid ""
+"Process both strings from beginning to end as two sequences of maximal-"
+"length chunks, where each chunk consists either of a sequence of characters "
+"other than ASCII digits, or a sequence of ASCII digits (a numeric chunk), "
+"and compare corresponding chunks from the strings."
+msgstr ""
+
+#: src/index.md:136
+msgid ""
+"To compare two numeric chunks, compare them by numeric value, ignoring "
+"leading zeroes. If the two chunks have equal numeric value, but different "
+"numbers of leading digits, and this is the first time this has happened for "
+"these strings, treat the chunks as equal (moving on to the next chunk) but "
+"remember which string had more leading zeroes."
+msgstr ""
+
+#: src/index.md:141
+msgid ""
+"To compare two chunks if both are not numeric, compare them by Unicode "
+"character lexicographically, with two exceptions:"
+msgstr ""
+
+#: src/index.md:143
+msgid ""
+"`_` (underscore) sorts immediately after ` ` (space) but before any other "
+"character. (This treats underscore as a word separator, as commonly used in "
+"identifiers.)"
+msgstr ""
+
+#: src/index.md:146
+msgid ""
+"Unless otherwise specified, version-sorting should sort non-lowercase "
+"characters (characters that can start an `UpperCamelCase` identifier) before "
+"lowercase characters."
+msgstr ""
+
+#: src/index.md:149
+msgid ""
+"If the comparison reaches the end of the string and considers each pair of "
+"chunks equal:"
+msgstr ""
+
+#: src/index.md:151
+msgid ""
+"If one of the numeric comparisons noted the earliest point at which one "
+"string had more leading zeroes than the other, sort the string with more "
+"leading zeroes first."
+msgstr ""
+
+#: src/index.md:154
+msgid "Otherwise, the strings are equal."
+msgstr ""
+
+#: src/index.md:156
+msgid ""
+"Note that there exist various algorithms called \"version sorting\", which "
+"generally try to solve the same problem, but which differ in various ways "
+"(such as in their handling of numbers with leading zeroes). This algorithm "
+"does not purport to precisely match the behavior of any particular other "
+"algorithm, only to produce a simple and satisfying result for Rust "
+"formatting. In particular, this algorithm aims to produce a satisfying "
+"result for a set of symbols that have the same number of leading zeroes, and "
+"an acceptable and easily understandable result for a set of symbols that has "
+"varying numbers of leading zeroes."
+msgstr ""
+
+#: src/index.md:166
+msgid ""
+"As an example, version-sorting will sort the following strings in the order "
+"given:"
+msgstr ""
+
+#: src/index.md:168
+msgid "`_ZYXW`"
+msgstr ""
+
+#: src/index.md:169
+msgid "`_abcd`"
+msgstr ""
+
+#: src/index.md:170
+msgid "`A2`"
+msgstr ""
+
+#: src/index.md:171
+msgid "`ABCD`"
+msgstr ""
+
+#: src/index.md:172
+msgid "`Z_YXW`"
+msgstr ""
+
+#: src/index.md:173 src/index.md:174
+msgid "`ZY_XW`"
+msgstr ""
+
+#: src/index.md:175
+msgid "`ZYXW`"
+msgstr ""
+
+#: src/index.md:176
+msgid "`ZYXW_`"
+msgstr ""
+
+#: src/index.md:177
+msgid "`a1`"
+msgstr ""
+
+#: src/index.md:178
+msgid "`abcd`"
+msgstr ""
+
+#: src/index.md:179
+msgid "`u_zzz`"
+msgstr ""
+
+#: src/index.md:180
+msgid "`u8`"
+msgstr ""
+
+#: src/index.md:181
+msgid "`u16`"
+msgstr ""
+
+#: src/index.md:182
+msgid "`u32`"
+msgstr ""
+
+#: src/index.md:183
+msgid "`u64`"
+msgstr ""
+
+#: src/index.md:184
+msgid "`u128`"
+msgstr ""
+
+#: src/index.md:185
+msgid "`u256`"
+msgstr ""
+
+#: src/index.md:186
+msgid "`ua`"
+msgstr ""
+
+#: src/index.md:187
+msgid "`usize`"
+msgstr ""
+
+#: src/index.md:188
+msgid "`uz`"
+msgstr ""
+
+#: src/index.md:189
+msgid "`v000`"
+msgstr ""
+
+#: src/index.md:190
+msgid "`v00`"
+msgstr ""
+
+#: src/index.md:191
+msgid "`v0`"
+msgstr ""
+
+#: src/index.md:192
+msgid "`v0s`"
+msgstr ""
+
+#: src/index.md:193
+msgid "`v00t`"
+msgstr ""
+
+#: src/index.md:194
+msgid "`v0u`"
+msgstr ""
+
+#: src/index.md:195
+msgid "`v001`"
+msgstr ""
+
+#: src/index.md:196
+msgid "`v01`"
+msgstr ""
+
+#: src/index.md:197
+msgid "`v1`"
+msgstr ""
+
+#: src/index.md:198
+msgid "`v009`"
+msgstr ""
+
+#: src/index.md:199
+msgid "`v09`"
+msgstr ""
+
+#: src/index.md:200
+msgid "`v9`"
+msgstr ""
+
+#: src/index.md:201
+msgid "`v010`"
+msgstr ""
+
+#: src/index.md:202
+msgid "`v10`"
+msgstr ""
+
+#: src/index.md:203
+msgid "`w005s09t`"
+msgstr ""
+
+#: src/index.md:204
+msgid "`w5s009t`"
+msgstr ""
+
+#: src/index.md:205
+msgid "`x64`"
+msgstr ""
+
+#: src/index.md:206
+msgid "`x86`"
+msgstr ""
+
+#: src/index.md:207
+msgid "`x86_32`"
+msgstr ""
+
+#: src/index.md:208
+msgid "`x86_64`"
+msgstr ""
+
+#: src/index.md:209
+msgid "`x86_128`"
+msgstr ""
+
+#: src/index.md:210
+msgid "`x87`"
+msgstr ""
+
+#: src/index.md:211
+msgid "`zyxw`"
+msgstr ""
+
+#: src/index.md:213
+msgid "[Module-level items](items.md)"
+msgstr ""
+
+#: src/index.md:215
+msgid "[Statements](statements.md)"
+msgstr ""
+
+#: src/index.md:217
+msgid "[Expressions](expressions.md)"
+msgstr ""
+
+#: src/index.md:219
+msgid "[Types](types.md)"
+msgstr ""
+
+#: src/index.md:221
+msgid "Comments"
+msgstr ""
+
+#: src/index.md:223
+msgid ""
+"The following guidelines for comments are recommendations only, a mechanical "
+"formatter might skip formatting of comments."
+msgstr ""
+
+#: src/index.md:226
+msgid "Prefer line comments (`//`) to block comments (`/* ... */`)."
+msgstr ""
+
+#: src/index.md:228
+msgid "When using line comments, put a single space after the opening sigil."
+msgstr ""
+
+#: src/index.md:230
+msgid ""
+"When using single-line block comments, put a single space after the opening "
+"sigil and before the closing sigil. For multi-line block comments, put a "
+"newline after the opening sigil, and a newline before the closing sigil."
+msgstr ""
+
+#: src/index.md:234
+msgid ""
+"Prefer to put a comment on its own line. Where a comment follows code, put a "
+"single space before it. Where a block comment appears inline, use "
+"surrounding whitespace as if it were an identifier or keyword."
+msgstr ""
+
+#: src/index.md:241
+msgid "// A comment on an item.\n"
+msgstr ""
+
+#: src/index.md:244
+msgid "// A comment after an item.\n"
+msgstr ""
+
+#: src/index.md:246
+msgid "/* a comment before an argument */"
+msgstr ""
+
+#: src/index.md:249
+msgid ""
+"Comments should usually be complete sentences. Start with a capital letter, "
+"end with a period (`.`). An inline block comment may be treated as a note "
+"without punctuation."
+msgstr ""
+
+#: src/index.md:253
+msgid ""
+"Source lines which are entirely a comment should be limited to 80 characters "
+"in length (including comment sigils, but excluding indentation) or the "
+"maximum width of the line (including comment sigils and indentation), "
+"whichever is smaller:"
+msgstr ""
+
+#: src/index.md:259
+msgid ""
+"// This comment goes up to the ................................. 80 char "
+"margin.\n"
+msgstr ""
+
+#: src/index.md:262
+msgid ""
+"// This comment is .............................................. 80 chars "
+"wide.\n"
+msgstr ""
+
+#: src/index.md:271
+msgid ""
+"// This comment is limited by the ......................... 100 char "
+"margin.\n"
+msgstr ""
+
+#: src/index.md:280
+msgid "Doc comments"
+msgstr ""
+
+#: src/index.md:282
+msgid "Prefer line comments (`///`) to block comments (`/** ... */`)."
+msgstr ""
+
+#: src/index.md:284
+msgid ""
+"Prefer outer doc comments (`///` or `/** ... */`), only use inner doc "
+"comments (`//!` and `/*! ... */`) to write module-level or crate-level "
+"documentation."
+msgstr ""
+
+#: src/index.md:287
+msgid "Put doc comments before attributes."
+msgstr ""
+
+#: src/index.md:289
+msgid "Attributes"
+msgstr ""
+
+#: src/index.md:291
+msgid ""
+"Put each attribute on its own line, indented to the level of the item. In "
+"the case of inner attributes (`#!`), indent it to the level of the inside of "
+"the item. Prefer outer attributes, where possible."
+msgstr ""
+
+#: src/index.md:295
+msgid "For attributes with argument lists, format like functions."
+msgstr ""
+
+#: src/index.md:312
+msgid ""
+"For attributes with an equal sign, put a single space before and after the "
+"`=`, e.g., `#[foo = 42]`."
+msgstr ""
+
+#: src/index.md:315
+msgid ""
+"There must only be a single `derive` attribute. Note for tool authors: if "
+"combining multiple `derive` attributes into a single attribute, the ordering "
+"of the derived names must generally be preserved for correctness: "
+"`#[derive(Foo)] #[derive(Bar)] struct Baz;` must be formatted to "
+"`#[derive(Foo, Bar)] struct Baz;`."
+msgstr ""
+
+#: src/index.md:321
+msgid "_small_ items"
+msgstr ""
+
+#: src/index.md:323
+msgid ""
+"In many places in this guide we specify formatting that depends on a code "
+"construct being _small_. For example, single-line vs multi-line struct "
+"literals:"
+msgstr ""
+
+#: src/index.md:328
+msgid "// Normal formatting\n"
+msgstr ""
+
+#: src/index.md:333
+msgid "// \"small\" formatting\n"
+msgstr ""
+
+#: src/index.md:338
+msgid ""
+"We leave it to individual tools to decide on exactly what _small_ means. In "
+"particular, tools are free to use different definitions in different "
+"circumstances."
+msgstr ""
+
+#: src/index.md:342
+msgid ""
+"Some suitable heuristics are the size of the item (in characters) or the "
+"complexity of an item (for example, that all components must be simple "
+"names, not more complex sub-expressions). For more discussion on suitable "
+"heuristics, see [this issue](https://github.com/rust-lang-nursery/fmt-rfcs/"
+"issues/47)."
+msgstr ""
+
+#: src/index.md:347
+msgid "[Non-formatting conventions](advice.md)"
+msgstr ""
+
+#: src/index.md:349
+msgid "[Cargo.toml conventions](cargo.md)"
+msgstr ""
+
+#: src/index.md:351
+msgid "[Principles used for deciding these guidelines](principles.md)"
+msgstr ""
+
+#: src/items.md:1
+msgid "Items"
+msgstr ""
+
+#: src/items.md:3
+msgid ""
+"Items consist of the set of things permitted at the top level of a module. "
+"However, Rust also allows some items to appear within some other types of "
+"items, such as within a function. The same formatting conventions apply "
+"whether an item appears at module level or within another item."
+msgstr ""
+
+#: src/items.md:8
+msgid ""
+"`extern crate` statements must be first in a file. They must be ordered "
+"alphabetically."
+msgstr ""
+
+#: src/items.md:11
+msgid ""
+"`use` statements, and module _declarations_ (`mod foo;`, not `mod { ... }`) "
+"must come before other items. Put imports before module declarations. "
+"Version-sort each, except that `self` and `super` must come before any other "
+"names."
+msgstr ""
+
+#: src/items.md:16
+msgid ""
+"Don't automatically move module declarations annotated with `#[macro_use]`, "
+"since that might change semantics."
+msgstr ""
+
+#: src/items.md:19
+msgid "Function definitions"
+msgstr ""
+
+#: src/items.md:21
+msgid ""
+"In Rust, people often find functions by searching for `fn [function-name]`, "
+"so the formatting of function definitions must enable this."
+msgstr ""
+
+#: src/items.md:24
+msgid "The proper ordering and spacing is:"
+msgstr ""
+
+#: src/items.md:27
+msgid "\"ABI\""
+msgstr ""
+
+#: src/items.md:32
+msgid "Avoid comments within the signature itself."
+msgstr ""
+
+#: src/items.md:34
+msgid ""
+"If the function signature does not fit on one line, then break after the "
+"opening parenthesis and before the closing parenthesis and put each argument "
+"on its own block-indented line. For example,"
+msgstr ""
+
+#: src/items.md:47
+msgid "Note the trailing comma on the last argument."
+msgstr ""
+
+#: src/items.md:49
+msgid "Tuples and tuple structs"
+msgstr ""
+
+#: src/items.md:51
+msgid "Write the type list as you would a parameter list to a function."
+msgstr ""
+
+#: src/items.md:53
+msgid "Build a tuple or tuple struct as you would call a function."
+msgstr ""
+
+#: src/items.md:55
+msgid "Single-line"
+msgstr ""
+
+#: src/items.md:64
+msgid "Enums"
+msgstr ""
+
+#: src/items.md:66
+msgid "In the declaration, put each variant on its own line, block indented."
+msgstr ""
+
+#: src/items.md:68
+msgid ""
+"Format each variant accordingly as either a struct (but without the `struct` "
+"keyword), a tuple struct, or an identifier (which doesn't require special "
+"formatting):"
+msgstr ""
+
+#: src/items.md:83
+msgid ""
+"If a struct variant is [_small_](index.html#small-items), format it on one "
+"line. In this case, do not use a trailing comma for the field list, but do "
+"put spaces around each brace:"
+msgstr ""
+
+#: src/items.md:93
+msgid ""
+"In an enum with multiple struct variants, if any struct variant is written "
+"on multiple lines, use the multi-line formatting for all struct variants. "
+"However, such a situation might be an indication that you should factor out "
+"the fields of the variant into their own struct."
+msgstr ""
+
+#: src/items.md:98
+msgid "Structs and Unions"
+msgstr ""
+
+#: src/items.md:100
+msgid ""
+"Struct names follow on the same line as the `struct` keyword, with the "
+"opening brace on the same line when it fits within the right margin. All "
+"struct fields are indented once and end with a trailing comma. The closing "
+"brace is not indented and appears on its own line."
+msgstr ""
+
+#: src/items.md:112
+msgid ""
+"If and only if the type of a field does not fit within the right margin, it "
+"is pulled down to its own line and indented again."
+msgstr ""
+
+#: src/items.md:123
+msgid ""
+"Prefer using a unit struct (e.g., `struct Foo;`) to an empty struct (e.g., "
+"`struct Foo();` or `struct Foo {}`, these only exist to simplify code "
+"generation), but if you must use an empty struct, keep it on one line with "
+"no space between the braces: `struct Foo();` or `struct Foo {}`."
+msgstr ""
+
+#: src/items.md:128
+msgid "The same guidelines are used for untagged union declarations."
+msgstr ""
+
+#: src/items.md:139
+msgid "Tuple structs"
+msgstr ""
+
+#: src/items.md:141
+msgid ""
+"Put the whole struct on one line if possible. Separate types within the "
+"parentheses using a comma and space. Don't use a trailing comma for a single-"
+"line tuple struct. Don't put spaces around the parentheses or semicolon:"
+msgstr ""
+
+#: src/items.md:149
+msgid ""
+"Prefer unit structs to empty tuple structs (these only exist to simplify "
+"code generation), e.g., `struct Foo;` rather than `struct Foo();`."
+msgstr ""
+
+#: src/items.md:152
+msgid ""
+"For more than a few fields (in particular if the tuple struct does not fit "
+"on one line), prefer a proper struct with named fields."
+msgstr ""
+
+#: src/items.md:155
+msgid ""
+"For a multi-line tuple struct, block-format the fields with a field on each "
+"line and a trailing comma:"
+msgstr ""
+
+#: src/items.md:165
+msgid "Traits"
+msgstr ""
+
+#: src/items.md:167
+msgid ""
+"Use block-indent for trait items. If there are no items, format the trait "
+"(including its `{}`) on a single line. Otherwise, break after the opening "
+"brace and before the closing brace:"
+msgstr ""
+
+#: src/items.md:179
+msgid ""
+"If the trait has bounds, put a space after the colon but not before, and put "
+"spaces around each `+`, e.g.,"
+msgstr ""
+
+#: src/items.md:186
+msgid ""
+"Prefer not to line-break in the bounds if possible (consider using a `where` "
+"clause). Prefer to break between bounds than to break any individual bound. "
+"If you must break the bounds, put each bound (including the first) on its "
+"own block-indented line, break before the `+` and put the opening brace on "
+"its own line:"
+msgstr ""
+
+#: src/items.md:203
+msgid "Impls"
+msgstr ""
+
+#: src/items.md:205
+msgid ""
+"Use block-indent for impl items. If there are no items, format the impl "
+"(including its `{}`) on a single line. Otherwise, break after the opening "
+"brace and before the closing brace:"
+msgstr ""
+
+#: src/items.md:217
+msgid ""
+"Avoid line-breaking in the signature if possible. If a line break is "
+"required in a non-inherent impl, break immediately before `for`, block "
+"indent the concrete type and put the opening brace on its own line:"
+msgstr ""
+
+#: src/items.md:229
+msgid "Extern crate"
+msgstr ""
+
+#: src/items.md:231
+msgid "`extern crate foo;`"
+msgstr ""
+
+#: src/items.md:233
+msgid "Use spaces around keywords, no spaces around the semicolon."
+msgstr ""
+
+#: src/items.md:235
+msgid "Modules"
+msgstr ""
+
+#: src/items.md:246
+msgid ""
+"Use spaces around keywords and before the opening brace, no spaces around "
+"the semicolon."
+msgstr ""
+
+#: src/items.md:249
+msgid "`macro_rules!`"
+msgstr ""
+
+#: src/items.md:251
+msgid "Use `{}` for the full definition of the macro."
+msgstr ""
+
+#: src/items.md:258
+msgid "Generics"
+msgstr ""
+
+#: src/items.md:260
+msgid ""
+"Prefer to put a generics clause on one line. Break other parts of an item "
+"declaration rather than line-breaking a generics clause. If a generics "
+"clause is large enough to require line-breaking, prefer a `where` clause "
+"instead."
+msgstr ""
+
+#: src/items.md:264
+msgid ""
+"Do not put spaces before or after `<` nor before `>`. Only put a space after "
+"`>` if it is followed by a word or opening brace, not an opening "
+"parenthesis. Put a space after each comma. Do not use a trailing comma for a "
+"single-line generics clause."
+msgstr ""
+
+#: src/items.md:275
+msgid ""
+"If the generics clause must be formatted across multiple lines, put each "
+"parameter on its own block-indented line, break after the opening `<` and "
+"before the closing `>`, and use a trailing comma."
+msgstr ""
+
+#: src/items.md:286
+msgid ""
+"If an associated type is bound in a generic type, put spaces around the `=`:"
+msgstr ""
+
+#: src/items.md:292
+msgid "Prefer to use single-letter names for generic parameters."
+msgstr ""
+
+#: src/items.md:294
+msgid "`where` clauses"
+msgstr ""
+
+#: src/items.md:296
+msgid "These rules apply for `where` clauses on any item."
+msgstr ""
+
+#: src/items.md:298
+msgid ""
+"If immediately following a closing bracket of any kind, write the keyword "
+"`where` on the same line, with a space before it."
+msgstr ""
+
+#: src/items.md:301
+msgid ""
+"Otherwise, put `where` on a new line at the same indentation level. Put each "
+"component of a `where` clause on its own line, block-indented. Use a "
+"trailing comma, unless the clause is terminated with a semicolon. If the "
+"`where` clause is followed by a block (or assignment), start that block on a "
+"new line. Examples:"
+msgstr ""
+
+#: src/items.md:339
+msgid "// Note, no trailing comma.\n"
+msgstr ""
+
+#: src/items.md:340
+msgid ""
+"// Note that where clauses on `type` aliases are not enforced and should "
+"not\n"
+"// be used.\n"
+msgstr ""
+
+#: src/items.md:349
+msgid ""
+"If a `where` clause is very short, prefer using an inline bound on the type "
+"parameter."
+msgstr ""
+
+#: src/items.md:352
+msgid ""
+"If a component of a `where` clause does not fit and contains `+`, break it "
+"before each `+` and block-indent the continuation lines. Put each bound on "
+"its own line. E.g.,"
+msgstr ""
+
+#: src/items.md:367
+msgid "Type aliases"
+msgstr ""
+
+#: src/items.md:369
+msgid ""
+"Keep type aliases on one line when they fit. If necessary to break the line, "
+"do so before the `=`, and block-indent the right-hand side:"
+msgstr ""
+
+#: src/items.md:374
+msgid "// If multi-line is required\n"
+msgstr ""
+
+#: src/items.md:380
+msgid ""
+"When there is a trailing `where` clause after the type, and no `where` "
+"clause present before the type, break before the `=` and indent. Then break "
+"before the `where` keyword and format the clauses normally, e.g.,"
+msgstr ""
+
+#: src/items.md:385
+msgid "// With only a trailing where clause\n"
+msgstr ""
+
+#: src/items.md:393
+msgid ""
+"When there is a `where` clause before the type, format it normally, and "
+"break after the last clause. Do not indent before the `=` to leave it "
+"visually distinct from the indented clauses that precede it. If there is "
+"additionally a `where` clause after the type, break before the `where` "
+"keyword and format the clauses normally."
+msgstr ""
+
+#: src/items.md:400
+msgid "// With only a preceding where clause.\n"
+msgstr ""
+
+#: src/items.md:406
+msgid "// Or with both a preceding and trailing where clause.\n"
+msgstr ""
+
+#: src/items.md:418
+msgid "Associated types"
+msgstr ""
+
+#: src/items.md:420
+msgid ""
+"Format associated types like type aliases. Where an associated type has a "
+"bound, put a space after the colon but not before:"
+msgstr ""
+
+#: src/items.md:427
+msgid "extern items"
+msgstr ""
+
+#: src/items.md:429
+msgid ""
+"When writing extern items (such as `extern \"C\" fn`), always specify the "
+"ABI. For example, write `extern \"C\" fn foo ...` or `unsafe extern "
+"\"C\" { ...}` and avoid `extern fn foo ...` and `unsafe extern { ... }`."
+msgstr ""
+
+#: src/items.md:433
+msgid "Imports (`use` statements)"
+msgstr ""
+
+#: src/items.md:435
+msgid ""
+"Format imports on one line where possible. Don't put spaces around braces."
+msgstr ""
+
+#: src/items.md:443
+msgid "Large list imports"
+msgstr ""
+
+#: src/items.md:445
+msgid ""
+"Prefer to use multiple imports rather than a multi-line import. However, "
+"tools should not split imports by default."
+msgstr ""
+
+#: src/items.md:448
+msgid ""
+"If an import does require multiple lines (either because a list of single "
+"names does not fit within the max width, or because of the rules for nested "
+"imports below), then break after the opening brace and before the closing "
+"brace, use a trailing comma, and block indent the names."
+msgstr ""
+
+#: src/items.md:454
+msgid "// Prefer\n"
+msgstr ""
+
+#: src/items.md:457
+msgid "// If necessary\n"
+msgstr ""
+
+#: src/items.md:461
+msgid "// Note trailing comma\n"
+msgstr ""
+
+#: src/items.md:465
+msgid "Ordering of imports"
+msgstr ""
+
+#: src/items.md:467
+msgid ""
+"A _group_ of imports is a set of imports on the same or sequential lines. "
+"One or more blank lines or other items (e.g., a function) separate groups of "
+"imports."
+msgstr ""
+
+#: src/items.md:470
+msgid ""
+"Within a group of imports, imports must be version-sorted. Groups of imports "
+"must not be merged or re-ordered."
+msgstr ""
+
+#: src/items.md:473
+msgid "E.g., input:"
+msgstr ""
+
+#: src/items.md:483
+msgid "output:"
+msgstr ""
+
+#: src/items.md:493
+msgid ""
+"Because of `macro_use`, attributes must also start a new group and prevent "
+"re-ordering."
+msgstr ""
+
+#: src/items.md:496
+msgid "Ordering list import"
+msgstr ""
+
+#: src/items.md:498
+msgid "Names in a list import must be version-sorted, except that:"
+msgstr ""
+
+#: src/items.md:499
+msgid "`self` and `super` always come first if present, and"
+msgstr ""
+
+#: src/items.md:500
+msgid "groups and glob imports always come last if present."
+msgstr ""
+
+#: src/items.md:502
+msgid ""
+"This applies recursively. For example, `a::*` comes before `b::a` but `a::b` "
+"comes before `a::*`. E.g., `use foo::bar::{a, b::c, b::d, b::d::{x, y, z}, "
+"b::{self, r, s}};`."
+msgstr ""
+
+#: src/items.md:506
+msgid "Normalisation"
+msgstr ""
+
+#: src/items.md:508
+msgid "Tools must make the following normalisations, recursively:"
+msgstr ""
+
+#: src/items.md:510
+msgid "`use a::self;` -> `use a;`"
+msgstr ""
+
+#: src/items.md:511
+msgid "`use a::{};` -> (nothing)"
+msgstr ""
+
+#: src/items.md:512
+msgid "`use a::{b};` -> `use a::b;`"
+msgstr ""
+
+#: src/items.md:514
+msgid ""
+"Tools must not otherwise merge or un-merge import lists or adjust glob "
+"imports (without an explicit option)."
+msgstr ""
+
+#: src/items.md:517
+msgid "Nested imports"
+msgstr ""
+
+#: src/items.md:519
+msgid ""
+"If there are any nested imports in a list import, then use the multi-line "
+"form, even if the import fits on one line. Each nested import must be on its "
+"own line, but non-nested imports must be grouped on as few lines as possible."
+msgstr ""
+
+#: src/items.md:523
+msgid "For example,"
+msgstr ""
+
+#: src/items.md:533
+msgid "Merging/un-merging imports"
+msgstr ""
+
+#: src/items.md:535
+msgid "An example:"
+msgstr ""
+
+#: src/items.md:538
+msgid "// Un-merged\n"
+msgstr ""
+
+#: src/items.md:541
+msgid "// Merged\n"
+msgstr ""
+
+#: src/items.md:546
+msgid ""
+"Tools must not merge or un-merge imports by default. They may offer merging "
+"or un-merging as an option."
+msgstr ""
+
+#: src/nightly.md:1
+msgid "Nightly"
+msgstr ""
+
+#: src/nightly.md:3
+msgid ""
+"This chapter documents style and formatting for nightly-only syntax. The "
+"rest of the style guide documents style for stable Rust syntax; nightly "
+"syntax only appears in this chapter. Each section here includes the name of "
+"the feature gate, so that searches (e.g. `git grep`) for a nightly feature "
+"in the Rust repository also turn up the style guide section."
+msgstr ""
+
+#: src/nightly.md:5
+msgid ""
+"Style and formatting for nightly-only syntax should be removed from this "
+"chapter and integrated into the appropriate sections of the style guide at "
+"the time of stabilization."
+msgstr ""
+
+#: src/nightly.md:7
+msgid ""
+"There is no guarantee of the stability of this chapter in contrast to the "
+"rest of the style guide. Refer to the style team policy for nightly "
+"formatting procedure regarding breaking changes to this chapter."
+msgstr ""
+
+#: src/nightly.md:9
+msgid "Frontmatter"
+msgstr ""
+
+#: src/nightly.md:11
+msgid ""
+"_Location: Placed before comments and attributes in the [root](index.html)._"
+msgstr ""
+
+#: src/nightly.md:13
+msgid ""
+"_Tracking issue: [\\#136889](https://github.com/rust-lang/rust/"
+"issues/136889)_"
+msgstr ""
+
+#: src/nightly.md:15
+msgid "_Feature gate: `frontmatter`_"
+msgstr ""
+
+#: src/nightly.md:17
+msgid ""
+"There should be no blank lines between the frontmatter and either the start "
+"of the file or a shebang. There can be zero or one line between the "
+"frontmatter and any following content."
+msgstr ""
+
+#: src/nightly.md:20
+msgid ""
+"The frontmatter fences should use the minimum number of dashes necessary for "
+"the contained content (one more than the longest series of initial dashes in "
+"the content, with a minimum of 3 to be recognized as frontmatter "
+"delimiters). If an infostring is present after the opening fence, there "
+"should be one space separating them. The frontmatter fence lines should not "
+"have trailing whitespace."
+msgstr ""
+
+#: src/nightly.md:29
+msgid "\"1\""
+msgstr ""
+
+#: src/advice.md:1
+msgid "Other style advice"
+msgstr ""
+
+#: src/advice.md:5
+msgid "Prefer to use Rust's expression oriented nature where possible;"
+msgstr ""
+
+#: src/advice.md:8
+msgid "// use\n"
+msgstr ""
+
+#: src/advice.md:9
+msgid "// not\n"
+msgstr ""
+
+#: src/advice.md:19
+msgid "Names"
+msgstr ""
+
+#: src/advice.md:21
+msgid "Types shall be `UpperCamelCase`,"
+msgstr ""
+
+#: src/advice.md:22
+msgid "Enum variants shall be `UpperCamelCase`,"
+msgstr ""
+
+#: src/advice.md:23
+msgid "Struct fields shall be `snake_case`,"
+msgstr ""
+
+#: src/advice.md:24
+msgid "Function and method names shall be `snake_case`,"
+msgstr ""
+
+#: src/advice.md:25
+msgid "Local variables shall be `snake_case`,"
+msgstr ""
+
+#: src/advice.md:26
+msgid "Macro names shall be `snake_case`,"
+msgstr ""
+
+#: src/advice.md:27
+msgid ""
+"Constants (`const`s and immutable `static`s) shall be `SCREAMING_SNAKE_CASE`."
+msgstr ""
+
+#: src/advice.md:28
+msgid ""
+"When a name is forbidden because it is a reserved word (such as `crate`), "
+"either use a raw identifier (`r#crate`) or use a trailing underscore "
+"(`crate_`). Don't misspell the word (`krate`)."
+msgstr ""
+
+#: src/advice.md:34
+msgid "Avoid `#[path]` annotations where possible."
+msgstr ""
+
+#: src/editions.md:1
+msgid "Rust style editions"
+msgstr ""
+
+#: src/editions.md:3
+msgid ""
+"The default Rust style evolves over time, as Rust does. However, to avoid "
+"breaking established code style, and CI jobs checking code style, changes to "
+"the default Rust style only appear in _style editions_."
+msgstr ""
+
+#: src/editions.md:7
+msgid ""
+"Code written in a given [Rust edition](https://doc.rust-lang.org/edition-"
+"guide/) uses the corresponding Rust style edition by default. To make it "
+"easier to migrate code style separately from the semantic changes between "
+"Rust editions, formatting tools such as `rustfmt` allow updating the style "
+"edition separately from the Rust edition."
+msgstr ""
+
+#: src/editions.md:14
+msgid ""
+"The current version of the style guide describes the latest Rust style "
+"edition. Each distinct past style will have a corresponding archived version "
+"of the style guide."
+msgstr ""
+
+#: src/editions.md:18
+msgid ""
+"Note that archived versions of the style guide do not document formatting "
+"for newer Rust constructs that did not exist at the time that version of the "
+"style guide was archived. However, each style edition will still format all "
+"constructs valid in that Rust edition, with the style of newer constructs "
+"coming from the first subsequent style edition providing formatting rules "
+"for that construct (without any of the systematic/global changes from that "
+"style edition)."
+msgstr ""
+
+#: src/editions.md:26
+msgid ""
+"Not all Rust editions have corresponding changes to the Rust style. For "
+"instance, Rust 2015, Rust 2018, and Rust 2021 all use the same style edition."
+msgstr ""
+
+#: src/editions.md:29
+msgid "Rust next style edition"
+msgstr ""
+
+#: src/editions.md:31
+msgid ""
+"Never break within a nullary function call `func()` or a unit literal `()`."
+msgstr ""
+
+#: src/editions.md:33
+msgid "Rust 2024 style edition"
+msgstr ""
+
+#: src/editions.md:35
+msgid ""
+"This style guide describes the Rust 2024 style edition. The Rust 2024 style "
+"edition is currently nightly-only and may change before the release of Rust "
+"2024."
+msgstr ""
+
+#: src/editions.md:39
+msgid ""
+"For a full history of changes in the Rust 2024 style edition, see the git "
+"history of the style guide. Notable changes in the Rust 2024 style edition "
+"include:"
+msgstr ""
+
+#: src/editions.md:43
+msgid "Miscellaneous `rustfmt` bugfixes."
+msgstr ""
+
+#: src/editions.md:44
+msgid ""
+"Use version-sort (sort `x8`, `x16`, `x32`, `x64`, `x128` in that order)."
+msgstr ""
+
+#: src/editions.md:45
+msgid ""
+"Change \"ASCIIbetical\" sort to Unicode-aware \"non-lowercase before "
+"lowercase\"."
+msgstr ""
+
+#: src/editions.md:47
+msgid "Rust 2015/2018/2021 style edition"
+msgstr ""
+
+#: src/editions.md:49
+msgid ""
+"The archived version of the style guide at <https://github.com/rust-lang/"
+"rust/tree/37343f4a4d4ed7ad0891cb79e8eb25acf43fb821/src/doc/style-guide/src> "
+"describes the style edition corresponding to Rust 2015, Rust 2018, and Rust "
+"2021."
+msgstr ""
+
+#: src/statements.md:1
+msgid "Statements"
+msgstr ""
+
+#: src/statements.md:3
+msgid "Let statements"
+msgstr ""
+
+#: src/statements.md:5
+msgid ""
+"Put a space after the `:` and on both sides of the `=` (if they are "
+"present). Don't put a space before the semicolon."
+msgstr ""
+
+#: src/statements.md:17
+msgid ""
+"If possible, format the declaration on a single line. If not possible, then "
+"try splitting after the `=`, if the declaration fits on two lines. Block-"
+"indent the expression."
+msgstr ""
+
+#: src/statements.md:26
+msgid ""
+"If the first line still does not fit on a single line, split after the `:`, "
+"and use block indentation. If the type requires multiple lines, even after "
+"line-breaking after the `:`, then place the first line on the same line as "
+"the `:`, subject to the [combining rules](expressions.html#combinable-"
+"expressions)."
+msgstr ""
+
+#: src/statements.md:37
+msgid "e.g,"
+msgstr ""
+
+#: src/statements.md:52
+msgid ""
+"If the expression covers multiple lines, if the first line of the expression "
+"fits in the remaining space, it stays on the same line as the `=`, and the "
+"rest of the expression is not further indented. If the first line does not "
+"fit, then put the expression on subsequent lines, block indented. If the "
+"expression is a block and the type or pattern cover multiple lines, put the "
+"opening brace on a new line and not indented (this provides separation for "
+"the interior of the block from the type); otherwise, the opening brace "
+"follows the `=`."
+msgstr ""
+
+#: src/statements.md:103
+msgid "else blocks (let-else statements)"
+msgstr ""
+
+#: src/statements.md:105
+msgid ""
+"A let statement can contain an `else` component, making it a let-else "
+"statement. In this case, always apply the same formatting rules to the "
+"components preceding the `else` block (i.e. the `let pattern: Type = "
+"initializer_expr` portion) as described [for other let statements](#let-"
+"statements)."
+msgstr ""
+
+#: src/statements.md:110
+msgid ""
+"Format the entire let-else statement on a single line if all the following "
+"are true:"
+msgstr ""
+
+#: src/statements.md:113
+msgid "the entire statement is _short_"
+msgstr ""
+
+#: src/statements.md:114
+msgid ""
+"the `else` block contains only a single-line expression and no statements"
+msgstr ""
+
+#: src/statements.md:115
+msgid "the `else` block contains no comments"
+msgstr ""
+
+#: src/statements.md:116
+msgid ""
+"the let statement components preceding the `else` block can be formatted on "
+"a single line"
+msgstr ""
+
+#: src/statements.md:122
+msgid "Otherwise, the let-else statement requires some line breaks."
+msgstr ""
+
+#: src/statements.md:124
+msgid ""
+"If breaking a let-else statement across multiple lines, never break between "
+"the `else` and the `{`, and always break before the `}`."
+msgstr ""
+
+#: src/statements.md:127
+msgid ""
+"If the let statement components preceding the `else` can be formatted on a "
+"single line, but the let-else does not qualify to be placed entirely on a "
+"single line, put the `else {` on the same line as the initializer "
+"expression, with a space between them, then break the line after the `{`. "
+"Indent the closing `}` to match the `let`, and indent the contained block "
+"one step further."
+msgstr ""
+
+#: src/statements.md:140
+msgid "// nope\n"
+msgstr ""
+
+#: src/statements.md:145
+msgid ""
+"If the let statement components preceding the `else` can be formatted on a "
+"single line, but the `else {` does not fit on the same line, break the line "
+"before the `else`."
+msgstr ""
+
+#: src/statements.md:156
+msgid ""
+"If the initializer expression is multi-line, put the `else` keyword and "
+"opening brace of the block (i.e. `else {`) on the same line as the end of "
+"the initializer expression, with a space between them, if and only if all "
+"the following are true:"
+msgstr ""
+
+#: src/statements.md:161
+msgid ""
+"The initializer expression ends with one or more closing parentheses, square "
+"brackets, and/or braces"
+msgstr ""
+
+#: src/statements.md:163
+msgid "There is nothing else on that line"
+msgstr ""
+
+#: src/statements.md:164
+msgid "That line has the same indentation level as the initial `let` keyword."
+msgstr ""
+
+#: src/statements.md:166 src/statements.md:185
+msgid "For example:"
+msgstr ""
+
+#: src/statements.md:170 src/statements.md:191
+msgid "\"abc\""
+msgstr ""
+
+#: src/statements.md:172
+msgid "\"def\""
+msgstr ""
+
+#: src/statements.md:173 src/statements.md:194
+msgid "\"123456\""
+msgstr ""
+
+#: src/statements.md:174
+msgid "\"string\""
+msgstr ""
+
+#: src/statements.md:175
+msgid "\"cheese\""
+msgstr ""
+
+#: src/statements.md:181
+msgid ""
+"Otherwise, put the `else` keyword and opening brace on the next line after "
+"the end of the initializer expression, with the `else` keyword at the same "
+"indentation level as the `let` keyword."
+msgstr ""
+
+#: src/statements.md:193
+msgid "\"ident\""
+msgstr ""
+
+#: src/statements.md:198
+msgid "\"fffffffffffffffff\""
+msgstr ""
+
+#: src/statements.md:233
+msgid "Macros in statement position"
+msgstr ""
+
+#: src/statements.md:235
+msgid ""
+"For a macro use in statement position, use parentheses or square brackets as "
+"delimiters, and terminate it with a semicolon. Do not put spaces around the "
+"name, `!`, the delimiters, or the `;`."
+msgstr ""
+
+#: src/statements.md:244
+msgid "Expressions in statement position"
+msgstr ""
+
+#: src/statements.md:246
+msgid "Do not put space between the expression and the semicolon."
+msgstr ""
+
+#: src/statements.md:252
+msgid ""
+"Terminate all expressions in statement position with a semicolon, unless "
+"they end with a block or are used as the value for a block."
+msgstr ""
+
+#: src/statements.md:255
+msgid "E.g.,"
+msgstr ""
+
+#: src/statements.md:270
+msgid ""
+"Use a semicolon where an expression has void type, even if it could be "
+"propagated. E.g.,"
+msgstr ""
+
+#: src/SUMMARY.md:1
+msgid "Summary"
+msgstr ""
+
+#: src/SUMMARY.md:3
+msgid "Introduction"
+msgstr ""
+
+#: src/SUMMARY.md:8
+msgid "Types and Bounds"
+msgstr ""
+
+#: src/SUMMARY.md:13
+msgid "Nightly-only syntax"
+msgstr ""
+
+#: src/types.md:3
+msgid "Single line formatting"
+msgstr ""
+
+#: src/types.md:5
+msgid "`[T]` no spaces"
+msgstr ""
+
+#: src/types.md:6
+msgid ""
+"`[T; expr]`, e.g., `[u32; 42]`, `[Vec<Foo>; 10 * 2 + foo()]` (space after "
+"colon, no spaces around square brackets)"
+msgstr ""
+
+#: src/types.md:7
+msgid "`*const T`, `*mut T` (no space after `*`, space before type)"
+msgstr ""
+
+#: src/types.md:8
+msgid ""
+"`&'a T`, `&T`, `&'a mut T`, `&mut T` (no space after `&`, single spaces "
+"separating other words)"
+msgstr ""
+
+#: src/types.md:9
+msgid ""
+"`unsafe extern \"C\" fn<'a, 'b, 'c>(T, U, V) -> W` or `fn()` (single spaces "
+"around keywords and sigils, and after commas, no trailing commas, no spaces "
+"around brackets)"
+msgstr ""
+
+#: src/types.md:10
+msgid "`!` gets treated like any other type name, `Name`"
+msgstr ""
+
+#: src/types.md:11
+msgid ""
+"`(A, B, C, D)` (spaces after commas, no spaces around parens, no trailing "
+"comma unless it is a one-tuple)"
+msgstr ""
+
+#: src/types.md:12
+msgid ""
+"`<Baz<T> as SomeTrait>::Foo::Bar` or `Foo::Bar` or `::Foo::Bar` (no spaces "
+"around `::` or angle brackets, single spaces around `as`)"
+msgstr ""
+
+#: src/types.md:13
+msgid ""
+"`Foo::Bar<T, U, V>` (spaces after commas, no trailing comma, no spaces "
+"around angle brackets)"
+msgstr ""
+
+#: src/types.md:14
+msgid "`T + T + T` (single spaces between types, and `+`)."
+msgstr ""
+
+#: src/types.md:15
+msgid "`impl T + T + T` (single spaces between keyword, types, and `+`)."
+msgstr ""
+
+#: src/types.md:17
+msgid "Do not put space around parentheses used in types, e.g., `(Foo)`"
+msgstr ""
+
+#: src/types.md:19
+msgid "Line breaks"
+msgstr ""
+
+#: src/types.md:21
+msgid ""
+"Avoid breaking lines in types where possible. Prefer breaking at outermost "
+"scope, e.g., prefer"
+msgstr ""
+
+#: src/types.md:30
+msgid "to"
+msgstr ""
+
+#: src/types.md:39
+msgid ""
+"If a type requires line-breaks in order to fit, this section outlines where "
+"to break such types if necessary."
+msgstr ""
+
+#: src/types.md:42
+msgid "Break `[T; expr]` after the `;` if necessary."
+msgstr ""
+
+#: src/types.md:44
+msgid "Break function types following the rules for function declarations."
+msgstr ""
+
+#: src/types.md:46
+msgid "Break generic types following the rules for generics."
+msgstr ""
+
+#: src/types.md:48
+msgid ""
+"Break types with `+` by breaking before the `+` and block-indenting the "
+"subsequent lines. When breaking such a type, break before _every_ `+`:"
+msgstr ""
+
+#: src/types.md:63
+msgid "Precise capturing bounds"
+msgstr ""
+
+#: src/types.md:65
+msgid ""
+"A `use<'a, T>` precise capturing bound is formatted as if it were a single "
+"path segment with non-turbofished angle-bracketed args, like a trait bound "
+"whose identifier is `use`."
+msgstr ""
+
+#: src/types.md:69
+msgid "// is formatted analogously to:\n"
+msgstr ""
