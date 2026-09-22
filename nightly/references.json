@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-05-01 13:57:47 +0000",
-      "hash" : "0164cc139285d5452053bcc5a83da046a501ed61",
-      "title" : "Auto merge of #156041 - JonathanBrouwer:rollup-yc0vOVk, r=JonathanBrouwer"
+      "date" : "2026-09-22 08:08:25 +0000",
+      "hash" : "c64de18c55c70d62aa88a5722dea8f8e263bacf3",
+      "title" : "Auto merge of #162499 - GuillaumeGomez:subtree-update_cg_gcc_2026-09-08, r=antoyo"
     }
   },
   "type" : "branch",
