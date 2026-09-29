@@ -1,0 +1,231 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Style Guide\n"
+"POT-Creation-Date: 2026-05-01T17:58:38Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/statements.md:1
+msgid "Statements"
+msgstr ""
+
+#: src/statements.md:3
+msgid "Let statements"
+msgstr ""
+
+#: src/statements.md:5
+msgid ""
+"Put a space after the `:` and on both sides of the `=` (if they are "
+"present). Don't put a space before the semicolon."
+msgstr ""
+
+#: src/statements.md:9 src/statements.md:240
+msgid "// A comment.\n"
+msgstr ""
+
+#: src/statements.md:17
+msgid ""
+"If possible, format the declaration on a single line. If not possible, then "
+"try splitting after the `=`, if the declaration fits on two lines. Block-"
+"indent the expression."
+msgstr ""
+
+#: src/statements.md:26
+msgid ""
+"If the first line still does not fit on a single line, split after the `:`, "
+"and use block indentation. If the type requires multiple lines, even after "
+"line-breaking after the `:`, then place the first line on the same line as "
+"the `:`, subject to the [combining rules](expressions.html#combinable-"
+"expressions)."
+msgstr ""
+
+#: src/statements.md:37
+msgid "e.g,"
+msgstr ""
+
+#: src/statements.md:52
+msgid ""
+"If the expression covers multiple lines, if the first line of the expression "
+"fits in the remaining space, it stays on the same line as the `=`, and the "
+"rest of the expression is not further indented. If the first line does not "
+"fit, then put the expression on subsequent lines, block indented. If the "
+"expression is a block and the type or pattern cover multiple lines, put the "
+"opening brace on a new line and not indented (this provides separation for "
+"the interior of the block from the type); otherwise, the opening brace "
+"follows the `=`."
+msgstr ""
+
+#: src/statements.md:60
+msgid "Examples:"
+msgstr ""
+
+#: src/statements.md:103
+msgid "else blocks (let-else statements)"
+msgstr ""
+
+#: src/statements.md:105
+msgid ""
+"A let statement can contain an `else` component, making it a let-else "
+"statement. In this case, always apply the same formatting rules to the "
+"components preceding the `else` block (i.e. the `let pattern: Type = "
+"initializer_expr` portion) as described [for other let statements](#let-"
+"statements)."
+msgstr ""
+
+#: src/statements.md:110
+msgid ""
+"Format the entire let-else statement on a single line if all the following "
+"are true:"
+msgstr ""
+
+#: src/statements.md:113
+msgid "the entire statement is _short_"
+msgstr ""
+
+#: src/statements.md:114
+msgid ""
+"the `else` block contains only a single-line expression and no statements"
+msgstr ""
+
+#: src/statements.md:115
+msgid "the `else` block contains no comments"
+msgstr ""
+
+#: src/statements.md:116
+msgid ""
+"the let statement components preceding the `else` block can be formatted on "
+"a single line"
+msgstr ""
+
+#: src/statements.md:122
+msgid "Otherwise, the let-else statement requires some line breaks."
+msgstr ""
+
+#: src/statements.md:124
+msgid ""
+"If breaking a let-else statement across multiple lines, never break between "
+"the `else` and the `{`, and always break before the `}`."
+msgstr ""
+
+#: src/statements.md:127
+msgid ""
+"If the let statement components preceding the `else` can be formatted on a "
+"single line, but the let-else does not qualify to be placed entirely on a "
+"single line, put the `else {` on the same line as the initializer "
+"expression, with a space between them, then break the line after the `{`. "
+"Indent the closing `}` to match the `let`, and indent the contained block "
+"one step further."
+msgstr ""
+
+#: src/statements.md:140
+msgid "// nope\n"
+msgstr ""
+
+#: src/statements.md:145
+msgid ""
+"If the let statement components preceding the `else` can be formatted on a "
+"single line, but the `else {` does not fit on the same line, break the line "
+"before the `else`."
+msgstr ""
+
+#: src/statements.md:156
+msgid ""
+"If the initializer expression is multi-line, put the `else` keyword and "
+"opening brace of the block (i.e. `else {`) on the same line as the end of "
+"the initializer expression, with a space between them, if and only if all "
+"the following are true:"
+msgstr ""
+
+#: src/statements.md:161
+msgid ""
+"The initializer expression ends with one or more closing parentheses, square "
+"brackets, and/or braces"
+msgstr ""
+
+#: src/statements.md:163
+msgid "There is nothing else on that line"
+msgstr ""
+
+#: src/statements.md:164
+msgid "That line has the same indentation level as the initial `let` keyword."
+msgstr ""
+
+#: src/statements.md:166 src/statements.md:185
+msgid "For example:"
+msgstr ""
+
+#: src/statements.md:170 src/statements.md:191
+msgid "\"abc\""
+msgstr ""
+
+#: src/statements.md:172
+msgid "\"def\""
+msgstr ""
+
+#: src/statements.md:173 src/statements.md:194
+msgid "\"123456\""
+msgstr ""
+
+#: src/statements.md:174
+msgid "\"string\""
+msgstr ""
+
+#: src/statements.md:175
+msgid "\"cheese\""
+msgstr ""
+
+#: src/statements.md:181
+msgid ""
+"Otherwise, put the `else` keyword and opening brace on the next line after "
+"the end of the initializer expression, with the `else` keyword at the same "
+"indentation level as the `let` keyword."
+msgstr ""
+
+#: src/statements.md:193
+msgid "\"ident\""
+msgstr ""
+
+#: src/statements.md:198
+msgid "\"fffffffffffffffff\""
+msgstr ""
+
+#: src/statements.md:233
+msgid "Macros in statement position"
+msgstr ""
+
+#: src/statements.md:235
+msgid ""
+"For a macro use in statement position, use parentheses or square brackets as "
+"delimiters, and terminate it with a semicolon. Do not put spaces around the "
+"name, `!`, the delimiters, or the `;`."
+msgstr ""
+
+#: src/statements.md:244
+msgid "Expressions in statement position"
+msgstr ""
+
+#: src/statements.md:246
+msgid "Do not put space between the expression and the semicolon."
+msgstr ""
+
+#: src/statements.md:252
+msgid ""
+"Terminate all expressions in statement position with a semicolon, unless "
+"they end with a block or are used as the value for a block."
+msgstr ""
+
+#: src/statements.md:255
+msgid "E.g.,"
+msgstr ""
+
+#: src/statements.md:270
+msgid ""
+"Use a semicolon where an expression has void type, even if it could be "
+"propagated. E.g.,"
+msgstr ""
