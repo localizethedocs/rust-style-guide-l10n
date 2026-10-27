@@ -778,8 +778,8 @@ msgstr ""
 #: src/expressions.md:955
 msgid ""
 "For the sake of indicating precedence, if either bound is a compound "
-"expression, use parentheses around it, e.g., `..(x + 1)`, `(x.f)..(x.f."
-"len())`, or `0..(x - 10)`."
+"expression, use parentheses around it, e.g., `..(x + 1)`, `(x.f).."
+"(x.f.len())`, or `0..(x - 10)`."
 msgstr ""
 
 #: src/expressions.md:959

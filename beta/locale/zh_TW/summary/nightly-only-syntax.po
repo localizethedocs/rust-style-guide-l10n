@@ -49,8 +49,8 @@ msgstr ""
 
 #: src/nightly.md:13
 msgid ""
-"_Tracking issue: [\\#136889](https://github.com/rust-lang/rust/"
-"issues/136889)_"
+"_Tracking issue: [\\#136889](https://github.com/rust-lang/rust/issues/"
+"136889)_"
 msgstr ""
 
 #: src/nightly.md:15
