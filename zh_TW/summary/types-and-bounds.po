@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Style Guide\n"
+"POT-Creation-Date: 2026-05-01T17:58:05Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/types.md:1
+msgid "Types and Bounds"
+msgstr ""
+
+#: src/types.md:3
+msgid "Single line formatting"
+msgstr ""
+
+#: src/types.md:5
+msgid "`[T]` no spaces"
+msgstr ""
+
+#: src/types.md:6
+msgid ""
+"`[T; expr]`, e.g., `[u32; 42]`, `[Vec<Foo>; 10 * 2 + foo()]` (space after "
+"colon, no spaces around square brackets)"
+msgstr ""
+
+#: src/types.md:7
+msgid "`*const T`, `*mut T` (no space after `*`, space before type)"
+msgstr ""
+
+#: src/types.md:8
+msgid ""
+"`&'a T`, `&T`, `&'a mut T`, `&mut T` (no space after `&`, single spaces "
+"separating other words)"
+msgstr ""
+
+#: src/types.md:9
+msgid ""
+"`unsafe extern \"C\" fn<'a, 'b, 'c>(T, U, V) -> W` or `fn()` (single spaces "
+"around keywords and sigils, and after commas, no trailing commas, no spaces "
+"around brackets)"
+msgstr ""
+
+#: src/types.md:10
+msgid "`!` gets treated like any other type name, `Name`"
+msgstr ""
+
+#: src/types.md:11
+msgid ""
+"`(A, B, C, D)` (spaces after commas, no spaces around parens, no trailing "
+"comma unless it is a one-tuple)"
+msgstr ""
+
+#: src/types.md:12
+msgid ""
+"`<Baz<T> as SomeTrait>::Foo::Bar` or `Foo::Bar` or `::Foo::Bar` (no spaces "
+"around `::` or angle brackets, single spaces around `as`)"
+msgstr ""
+
+#: src/types.md:13
+msgid ""
+"`Foo::Bar<T, U, V>` (spaces after commas, no trailing comma, no spaces "
+"around angle brackets)"
+msgstr ""
+
+#: src/types.md:14
+msgid "`T + T + T` (single spaces between types, and `+`)."
+msgstr ""
+
+#: src/types.md:15
+msgid "`impl T + T + T` (single spaces between keyword, types, and `+`)."
+msgstr ""
+
+#: src/types.md:17
+msgid "Do not put space around parentheses used in types, e.g., `(Foo)`"
+msgstr ""
+
+#: src/types.md:19
+msgid "Line breaks"
+msgstr ""
+
+#: src/types.md:21
+msgid ""
+"Avoid breaking lines in types where possible. Prefer breaking at outermost "
+"scope, e.g., prefer"
+msgstr ""
+
+#: src/types.md:30
+msgid "to"
+msgstr ""
+
+#: src/types.md:39
+msgid ""
+"If a type requires line-breaks in order to fit, this section outlines where "
+"to break such types if necessary."
+msgstr ""
+
+#: src/types.md:42
+msgid "Break `[T; expr]` after the `;` if necessary."
+msgstr ""
+
+#: src/types.md:44
+msgid "Break function types following the rules for function declarations."
+msgstr ""
+
+#: src/types.md:46
+msgid "Break generic types following the rules for generics."
+msgstr ""
+
+#: src/types.md:48
+msgid ""
+"Break types with `+` by breaking before the `+` and block-indenting the "
+"subsequent lines. When breaking such a type, break before _every_ `+`:"
+msgstr ""
+
+#: src/types.md:63
+msgid "Precise capturing bounds"
+msgstr ""
+
+#: src/types.md:65
+msgid ""
+"A `use<'a, T>` precise capturing bound is formatted as if it were a single "
+"path segment with non-turbofished angle-bracketed args, like a trait bound "
+"whose identifier is `use`."
+msgstr ""
+
+#: src/types.md:69
+msgid "// is formatted analogously to:\n"
+msgstr ""
