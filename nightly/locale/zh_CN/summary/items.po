@@ -397,8 +397,8 @@ msgstr ""
 #: src/items.md:429
 msgid ""
 "When writing extern items (such as `extern \"C\" fn`), always specify the "
-"ABI. For example, write `extern \"C\" fn foo ...` or `unsafe extern "
-"\"C\" { ...}` and avoid `extern fn foo ...` and `unsafe extern { ... }`."
+"ABI. For example, write `extern \"C\" fn foo ...` or `unsafe extern \"C\" "
+"{ ...}` and avoid `extern fn foo ...` and `unsafe extern { ... }`."
 msgstr ""
 
 #: src/items.md:433
