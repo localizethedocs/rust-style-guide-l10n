@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Rust Style Guide\n"
-"POT-Creation-Date: 2026-05-01T17:58:05Z\n"
+"POT-Creation-Date: 2026-11-10T16:30:34Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/items.md:1
@@ -391,36 +391,25 @@ msgid ""
 msgstr ""
 
 #: src/items.md:427
-msgid "extern items"
+msgid "Imports (`use` statements)"
 msgstr ""
 
 #: src/items.md:429
 msgid ""
-"When writing extern items (such as `extern \"C\" fn`), always specify the "
-"ABI. For example, write `extern \"C\" fn foo ...` or `unsafe extern "
-"\"C\" { ...}` and avoid `extern fn foo ...` and `unsafe extern { ... }`."
-msgstr ""
-
-#: src/items.md:433
-msgid "Imports (`use` statements)"
-msgstr ""
-
-#: src/items.md:435
-msgid ""
 "Format imports on one line where possible. Don't put spaces around braces."
 msgstr ""
 
-#: src/items.md:443
+#: src/items.md:437
 msgid "Large list imports"
 msgstr ""
 
-#: src/items.md:445
+#: src/items.md:439
 msgid ""
 "Prefer to use multiple imports rather than a multi-line import. However, "
 "tools should not split imports by default."
 msgstr ""
 
-#: src/items.md:448
+#: src/items.md:442
 msgid ""
 "If an import does require multiple lines (either because a list of single "
 "names does not fit within the max width, or because of the rules for nested "
@@ -428,130 +417,130 @@ msgid ""
 "brace, use a trailing comma, and block indent the names."
 msgstr ""
 
-#: src/items.md:454
+#: src/items.md:448
 msgid "// Prefer\n"
 msgstr ""
 
-#: src/items.md:457
+#: src/items.md:451
 msgid "// If necessary\n"
 msgstr ""
 
-#: src/items.md:461
+#: src/items.md:455
 msgid "// Note trailing comma\n"
 msgstr ""
 
-#: src/items.md:465
+#: src/items.md:459
 msgid "Ordering of imports"
 msgstr ""
 
-#: src/items.md:467
+#: src/items.md:461
 msgid ""
 "A _group_ of imports is a set of imports on the same or sequential lines. "
 "One or more blank lines or other items (e.g., a function) separate groups of "
 "imports."
 msgstr ""
 
-#: src/items.md:470
+#: src/items.md:464
 msgid ""
 "Within a group of imports, imports must be version-sorted. Groups of imports "
 "must not be merged or re-ordered."
 msgstr ""
 
-#: src/items.md:473
+#: src/items.md:467
 msgid "E.g., input:"
 msgstr ""
 
-#: src/items.md:483
+#: src/items.md:477
 msgid "output:"
 msgstr ""
 
-#: src/items.md:493
+#: src/items.md:487
 msgid ""
 "Because of `macro_use`, attributes must also start a new group and prevent "
 "re-ordering."
 msgstr ""
 
-#: src/items.md:496
+#: src/items.md:490
 msgid "Ordering list import"
 msgstr ""
 
-#: src/items.md:498
+#: src/items.md:492
 msgid "Names in a list import must be version-sorted, except that:"
 msgstr ""
 
-#: src/items.md:499
+#: src/items.md:493
 msgid "`self` and `super` always come first if present, and"
 msgstr ""
 
-#: src/items.md:500
+#: src/items.md:494
 msgid "groups and glob imports always come last if present."
 msgstr ""
 
-#: src/items.md:502
+#: src/items.md:496
 msgid ""
 "This applies recursively. For example, `a::*` comes before `b::a` but `a::b` "
 "comes before `a::*`. E.g., `use foo::bar::{a, b::c, b::d, b::d::{x, y, z}, "
 "b::{self, r, s}};`."
 msgstr ""
 
-#: src/items.md:506
+#: src/items.md:500
 msgid "Normalisation"
 msgstr ""
 
-#: src/items.md:508
+#: src/items.md:502
 msgid "Tools must make the following normalisations, recursively:"
 msgstr ""
 
-#: src/items.md:510
+#: src/items.md:504
 msgid "`use a::self;` -> `use a;`"
 msgstr ""
 
-#: src/items.md:511
+#: src/items.md:505
 msgid "`use a::{};` -> (nothing)"
 msgstr ""
 
-#: src/items.md:512
+#: src/items.md:506
 msgid "`use a::{b};` -> `use a::b;`"
 msgstr ""
 
-#: src/items.md:514
+#: src/items.md:508
 msgid ""
 "Tools must not otherwise merge or un-merge import lists or adjust glob "
 "imports (without an explicit option)."
 msgstr ""
 
-#: src/items.md:517
+#: src/items.md:511
 msgid "Nested imports"
 msgstr ""
 
-#: src/items.md:519
+#: src/items.md:513
 msgid ""
 "If there are any nested imports in a list import, then use the multi-line "
 "form, even if the import fits on one line. Each nested import must be on its "
 "own line, but non-nested imports must be grouped on as few lines as possible."
 msgstr ""
 
-#: src/items.md:523
+#: src/items.md:517
 msgid "For example,"
 msgstr ""
 
-#: src/items.md:533
+#: src/items.md:527
 msgid "Merging/un-merging imports"
 msgstr ""
 
-#: src/items.md:535
+#: src/items.md:529
 msgid "An example:"
 msgstr ""
 
-#: src/items.md:538
+#: src/items.md:532
 msgid "// Un-merged\n"
 msgstr ""
 
-#: src/items.md:541
+#: src/items.md:535
 msgid "// Merged\n"
 msgstr ""
 
-#: src/items.md:546
+#: src/items.md:540
 msgid ""
 "Tools must not merge or un-merge imports by default. They may offer merging "
 "or un-merging as an option."
