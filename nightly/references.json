@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-05-01 13:57:47 +0000",
-      "hash" : "0164cc139285d5452053bcc5a83da046a501ed61",
-      "title" : "Auto merge of #156041 - JonathanBrouwer:rollup-yc0vOVk, r=JonathanBrouwer"
+      "date" : "2026-11-17 12:21:42 +0000",
+      "hash" : "646bb8409b143093219faff19f3a685b874109d6",
+      "title" : "Auto merge of #164852 - malezjaa:import-hashbrown, r=Kobzol,clarfonthey"
     }
   },
   "type" : "branch",
